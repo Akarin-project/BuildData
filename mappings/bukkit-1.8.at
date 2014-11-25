@@ -1,0 +1,187 @@
+# new
+
+public-synthetic net.minecraft.server.GroupDataZombie/<init>(Lnet/minecraft/server/EntityZombie;ZZLnet/minecraft/server/EmptyClassZombie;)V
+public-synthetic net.minecraft.server.SwitchHelperDirection12/a
+public-synthetic net.minecraft.server.SwitchHelperDirection10/a
+public-synthetic net.minecraft.server.SwitchHelperDirection15/a
+public-synthetic net.minecraft.server.SwitchHelperDirection13/a
+public-synthetic net.minecraft.server.SwitchHelperDirection3/a
+public-synthetic net.minecraft.server.SwitchHelperDirection1/a
+public-synthetic net.minecraft.server.SwitchHelperMobType/a
+public-synthetic net.minecraft.server.SwitchHelperEntityMinecartAbstract/a
+public-synthetic net.minecraft.server.SwitchHelperEntityMinecartAbstract/b
+public-synthetic net.minecraft.server.SwitchHelperBlockCocoa/a
+public-synthetic net.minecraft.server.SwitchHelperBlockLever/a
+public-synthetic net.minecraft.server.SwitchHelperBlockLever/b
+public-synthetic net.minecraft.server.SwitchHelperBlockLever/c
+public-synthetic net.minecraft.server.SwitchHelperMonsterEggVarient/a
+public-synthetic net.minecraft.server.SwitchHelperTileEntityChest/a
+public-synthetic net.minecraft.server.SwitchHelperBlockButtonAbstract/a
+public-synthetic net.minecraft.server.SwitchHelperTileEntityPiston/a
+public-synthetic net.minecraft.server.SwitchHelperCommandActionType/a
+public-synthetic net.minecraft.server.SwitchHelperCommandActionType/b
+public-synthetic net.minecraft.server.SwitchHelperCommandActionType/c
+public-synthetic net.minecraft.server.SwitchHelperTrackPosition/a
+public-synthetic net.minecraft.server.SwitchHelperEntityHuman/a
+
+public-synthetic net.minecraft.server.QueuedPacket/b(Lnet/minecraft/server/QueuedPacket;)[Lio/netty/util/concurrent/GenericFutureListener;
+
+public-synthetic net.minecraft.server.TileEntityMobSpawnerData/a(Lnet/minecraft/server/TileEntityMobSpawnerData;)Ljava/lang/String;
+public-synthetic net.minecraft.server.TileEntityMobSpawnerData/b(Lnet/minecraft/server/TileEntityMobSpawnerData;)Lnet/minecraft/server/NBTTagCompound;
+public-synthetic net.minecraft.server.PortalCreator/a(Lnet/minecraft/server/PortalCreator;)I
+public-synthetic net.minecraft.server.PortalCreator/b(Lnet/minecraft/server/PortalCreator;)I
+public-synthetic net.minecraft.server.PortalCreator/c(Lnet/minecraft/server/PortalCreator;)I
+public-synthetic net.minecraft.server.WorldGenVillagePieces/a(Lnet/minecraft/server/WorldGenVillageStartPiece;Ljava/util/List;Ljava/util/Random;IIILnet/minecraft/server/EnumDirection;I)
+public-synthetic net.minecraft.server.WorldGenVillagePieces/b(Lnet/minecraft/server/WorldGenVillageStartPiece;Ljava/util/List;Ljava/util/Random;IIILnet/minecraft/server/EnumDirection;I)
+
+public net.minecraft.server.World/worldMaps
+public net.minecraft.server.World/scoreboard
+public net.minecraft.server.World/allowMonsters
+public net.minecraft.server.World/allowAnimals
+public net.minecraft.server.EntityPlayer/nextContainerCounter()V
+public-final net.minecraft.server.MinecraftServer/convertable
+public-final net.minecraft.server.MinecraftServer/universe
+public net.minecraft.server.PacketPlayOutSpawnPosition/position
+public net.minecraft.server.TileEntityBrewingStand/items
+public net.minecraft.server.InventorySubcontainer/items
+public-final net.minecraft.server.WorldServer/tracker
+public net.minecraft.server.ContainerChest/container
+public net.minecraft.server.EntityLiving/killer
+public net.minecraft.server.EntityLiving/updateEffects
+public net.minecraft.server.ChunkRegionLoader/a(Lnet/minecraft/server/PendingChunkToSave;)V
+public-final net.minecraft.server.CraftingManager/recipes
+public net.minecraft.server.FoodMetaData/foodTickTimer
+public net.minecraft.server.Entity/uniqueID
+public net.minecraft.server.DedicatedServer/z()V
+public net.minecraft.server.EntityVillager/inventory
+public net.minecraft.server.Explosion/source
+public net.minecraft.server.EntityFallingBlock/block
+public net.minecraft.server.PlayerList/sendScoreboard(Lnet/minecraft/server/ScoreboardServer;Lnet/minecraft/server/EntityPlayer;)V
+public net.minecraft.server.PropertyManager/properties
+public net.minecraft.server.WorldManager/world
+
+public net.minecraft.server.EntityArmorStand/setSmall(Z)V
+public net.minecraft.server.EntityArmorStand/setArms(Z)V
+public net.minecraft.server.EntityArmorStand/setGravity(Z)V
+public net.minecraft.server.EntityArmorStand/setBasePlate(Z)V
+
+public net.minecraft.server.EntityArmorStand/headPose
+public net.minecraft.server.EntityArmorStand/bodyPose
+public net.minecraft.server.EntityArmorStand/leftArmPose
+public net.minecraft.server.EntityArmorStand/rightArmPose
+public net.minecraft.server.EntityArmorStand/leftLegPose
+public net.minecraft.server.EntityArmorStand/rightLegPose
+
+public net.minecraft.server.TileEntityBanner/color
+public net.minecraft.server.TileEntityBanner/patterns
+
+public net.minecraft.server.LoginListener£1/<init>(Lnet/minecraft/server/LoginListener;)V
+public net.minecraft.server.PlayerConnectionDisconnector/<init>(Lnet/minecraft/server/PlayerConnection;)V
+public net.minecraft.server.SecondaryWorldServer£1/<init>(Lnet/minecraft/server/SecondaryWorldServer;)V
+
+public net.minecraft.server.ContainerAnvilInventory
+
+# These are package private constructors / enums
+public-synthetic net.minecraft.server.BlockActionDataList/<init>(Lnet/minecraft/server/EntitySelectorLiving2;)V
+
+public-synthetic net.minecraft.server.ProtocolOrdinalWrapper/a
+
+public-synthetic net.minecraft.server.FileConversionException/<init>(Ljava/lang/String;Lnet/minecraft/server/PredicateEmptyList;)V
+public-synthetic net.minecraft.server.FileConversionException/<init>(Ljava/lang/String;Ljava/lang/Throwable;Lnet/minecraft/server/PredicateEmptyList;)V
+
+public-synthetic net.minecraft.server.JsonListEntrySerializer/<init>(Lnet/minecraft/server/JsonList;Lnet/minecraft/server/JsonListType;)V
+
+public-synthetic net.minecraft.server.QueuedPacket/a(Lnet/minecraft/server/QueuedPacket;)Lnet/minecraft/server/Packet;
+public-synthetic net.minecraft.server.QueuedPacket/b(Lnet/minecraft/server/QueuedPacket;)[Lnet/minecraft/util/io/netty/util/concurrent/GenericFutureListener;
+
+# These need to be tested in the update / decompile
+public net.minecraft.server.BlockDispenser/dispense(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
+public net.minecraft.server.BlockDropper/dispense(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
+public net.minecraft.server.BlockJukeBox/dropRecord(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;Lnet/minecraft/server/IBlockData;)V
+public net.minecraft.server.BlockRedstoneWire/getPower(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;I)I
+public net.minecraft.server.Chunk/world
+public net.minecraft.server.Chunk/entitySlices
+public net.minecraft.server.Chunk/tileEntities
+public net.minecraft.server.Chunk/done
+public net.minecraft.server.ChunkProviderServer/chunks
+public net.minecraft.server.ChunkProviderServer/unloadQueue
+public net.minecraft.server.ChunkProviderServer/chunkProvider
+public net.minecraft.server.ChunkProviderServer/emptyChunk
+public net.minecraft.server.ChunkProviderServer/loadChunk(II)Lnet/minecraft/server/Chunk;
+public net.minecraft.server.ChunkProviderServer/saveChunkNOP(Lnet/minecraft/server/Chunk;)V
+public net.minecraft.server.ChunkProviderServer/saveChunk(Lnet/minecraft/server/Chunk;)V
+public net.minecraft.server.CommandBlockListenerAbstract/e # Obfuscated!
+public net.minecraft.server.Container/g # Obfuscated!
+public net.minecraft.server.ContainerDispender/items
+public net.minecraft.server.CraftingManager/recipes
+public net.minecraft.server.CraftingManager/<init>()V
+public net.minecraft.server.DedicatedServer/propertyManager
+public net.minecraft.server.Entity/fireTicks
+public net.minecraft.server.EntityArrow/knockbackStrength
+public net.minecraft.server.EntityCreature/pathEntity
+public net.minecraft.server.EntityExperienceOrb/value
+public net.minecraft.server.EntityFallingBlock/id
+public net.minecraft.server.EntityFireworks/expectedLifespan
+public net.minecraft.server.EntityHanging/blockPosition
+public net.minecraft.server.EntityHanging/setDirection(Lnet/minecraft/server/EnumDirection;)V
+public net.minecraft.server.EntityHorse/attributeJumpStrength
+public net.minecraft.server.EntityHorse/inventoryChest
+public net.minecraft.server.EntityHorse/loadChest()V
+public net.minecraft.server.EntityHuman/sleeping
+public net.minecraft.server.EntityHuman/sleepTicks
+public net.minecraft.server.EntityHuman/closeInventory()V
+public net.minecraft.server.EntityInsentient/dropChances
+public net.minecraft.server.EntityInsentient/canPickUpLoot
+public net.minecraft.server.EntityInsentient/persistent
+public net.minecraft.server.EntityItem/pickupDelay
+public-final net.minecraft.server.EntityLiving/combatTracker
+public net.minecraft.server.EntityLiving/effects
+public net.minecraft.server.EntityLiving/lastDamager
+public net.minecraft.server.EntityLiving/lastDamage
+public net.minecraft.server.EntityMinecartCommandBlockListener
+public net.minecraft.server.EntityPigZombie/angerLevel
+public net.minecraft.server.EntityPlayer/removeQueue
+public net.minecraft.server.EntityPlayer/lastSentExp
+public net.minecraft.server.EntityPlayer/invulnerableTicks
+public net.minecraft.server.EntityPotion/item
+public net.minecraft.server.EntityProjectile/shooter
+public net.minecraft.server.EntityProjectile/shooterName
+public net.minecraft.server.EntitySlime/setSize(I)V
+public net.minecraft.server.EntityTracker/trackedEntities
+public net.minecraft.server.FoodMetaData/foodLevel
+public net.minecraft.server.FoodMetaData/saturationLevel
+public net.minecraft.server.FoodMetaData/exhaustionLevel
+public net.minecraft.server.InventoryLargeChest/left
+public net.minecraft.server.InventoryLargeChest/right
+public net.minecraft.server.JsonListEntry/getKey()Ljava/lang/Object;
+public net.minecraft.server.MobSpawnerAbstract/getMobName()Ljava/lang/String;
+public net.minecraft.server.MobSpawnerAbstract/spawnDelay
+public net.minecraft.server.PacketHandshakingInSetProtocol/b # Obfuscated!
+public net.minecraft.server.PacketHandshakingInSetProtocol/c # Obfuscated!
+public net.minecraft.server.PacketPlayInCustomPayload/length
+public net.minecraft.server.PacketPlayOutBlockChange/block
+public net.minecraft.server.PacketPlayOutSpawnPosition/x
+public net.minecraft.server.PacketPlayOutSpawnPosition/y
+public net.minecraft.server.PacketPlayOutSpawnPosition/z
+public net.minecraft.server.PlayerAbilities/flySpeed
+public net.minecraft.server.PlayerAbilities/walkSpeed
+public net.minecraft.server.PlayerConnection/checkMovement
+public net.minecraft.server.PlayerList/playerFileData
+public net.minecraft.server.PlayerList/hasWhitelist
+public net.minecraft.server.PropertyManager/properties
+public net.minecraft.server.RecipesFurnace/recipes
+public net.minecraft.server.RecipesFurnace/<init>()V
+public net.minecraft.server.Slot/index
+public net.minecraft.server.TileEntityBrewingStand/items
+public net.minecraft.server.TileEntityBrewingStand/brewTime
+public net.minecraft.server.TileEntityCommandListener
+public net.minecraft.server.TileEntityFurnace/burnTime
+public net.minecraft.server.TileEntityFurnace/cookTime
+public net.minecraft.server.TileEntitySign/isEditable
+public net.minecraft.server.TileEntitySkull/rotation
+public-final net.minecraft.server.World/worldProvider
+public net.minecraft.server.World/worldData
+public net.minecraft.server.WorldServer/tracker
+public net.minecraft.server.WorldManager/world
+
+protected-final net.minecraft.server.EntityInsentient/doTick()V
