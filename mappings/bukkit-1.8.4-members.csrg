@@ -1722,7 +1722,7 @@ GameRules b (Ljava/lang/String;)Z getBoolean
 GameRules e (Ljava/lang/String;)Z contains
 GenericAttributes a maxHealth
 IAsyncTaskHandler a (Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture; postToMainThread
-IAsyncTaskHandler aI ()Z isMainThread
+IAsyncTaskHandler aJ ()Z isMainThread
 IAttribute a ()Ljava/lang/String; getName
 IBlockAccess a (LBlockPosition;LEnumDirection;)I getBlockPower
 IBlockAccess d (LBlockPosition;)Z isEmpty
@@ -1783,14 +1783,14 @@ IInventory p_ ()V update
 IInventory q_ ()I getMaxStackSize
 IMerchant b_ (LEntityHuman;)LMerchantRecipeList; getOffers
 IMerchant f_ ()LIChatBaseComponent; getScoreboardDisplayName
-IMinecraftServer G ()Ljava/lang/String; getVersion
-IMinecraftServer J ()[Ljava/lang/String; getPlayers
+IMinecraftServer H ()Ljava/lang/String; getVersion
+IMinecraftServer K ()[Ljava/lang/String; getPlayers
 IMinecraftServer d_ ()Ljava/lang/String; getPlugins
-IMinecraftServer L ()Z isDebugging
+IMinecraftServer M ()Z isDebugging
 IMinecraftServer e (Ljava/lang/String;)V info
 IMinecraftServer f (Ljava/lang/String;)V warning
 IMinecraftServer a_ (Ljava/lang/String;)Ljava/lang/String; executeRemoteCommand
-IMojangStatistics ac ()Z getSnooperEnabled
+IMojangStatistics ad ()Z getSnooperEnabled
 INamable l ()Ljava/lang/String; getName
 INamableTileEntity e_ ()Ljava/lang/String; getName
 INamableTileEntity f_ ()LIChatBaseComponent; getScoreboardDisplayName
@@ -2169,45 +2169,45 @@ MinecraftEncryption a (ILjava/lang/String;Ljava/security/Key;)Ljavax/crypto/Ciph
 MinecraftEncryption a (ILjava/security/Key;)Ljavax/crypto/Cipher; a
 MinecraftEncryption a (Ljava/lang/String;Ljava/security/PublicKey;Ljavax/crypto/SecretKey;)[B a
 MinecraftEncryption a (Ljava/security/PrivateKey;[B)Ljavax/crypto/SecretKey; a
-net/minecraft/server/MinecraftServer B ()Z getAllowNether
+net/minecraft/server/MinecraftServer C ()Z getAllowNether
 net/minecraft/server/MinecraftServer A spawnAnimals
 net/minecraft/server/MinecraftServer B spawnNPCs
 net/minecraft/server/MinecraftServer C pvpMode
 net/minecraft/server/MinecraftServer D allowFlight
 net/minecraft/server/MinecraftServer E motd
-net/minecraft/server/MinecraftServer G ()Ljava/lang/String; getVersion
-net/minecraft/server/MinecraftServer J ()[Ljava/lang/String; getPlayers
-net/minecraft/server/MinecraftServer L ()Z isDebugging
+net/minecraft/server/MinecraftServer H ()Ljava/lang/String; getVersion
+net/minecraft/server/MinecraftServer K ()[Ljava/lang/String; getPlayers
+net/minecraft/server/MinecraftServer M ()Z isDebugging
 net/minecraft/server/MinecraftServer L demoMode
-net/minecraft/server/MinecraftServer M ()Lnet/minecraft/server/MinecraftServer; getServer
-net/minecraft/server/MinecraftServer O ()LICommandHandler; getCommandHandler
-net/minecraft/server/MinecraftServer V ()Z getSpawnMonsters
-net/minecraft/server/MinecraftServer X ()LConvertable; getConvertable
+net/minecraft/server/MinecraftServer N ()Lnet/minecraft/server/MinecraftServer; getServer
+net/minecraft/server/MinecraftServer P ()LICommandHandler; getCommandHandler
+net/minecraft/server/MinecraftServer W ()Z getSpawnMonsters
+net/minecraft/server/MinecraftServer Y ()LConvertable; getConvertable
 net/minecraft/server/MinecraftServer a (I)LWorldServer; getWorldServer
 net/minecraft/server/MinecraftServer a (LWorldSettings$EnumGamemode;)V setGamemode
 net/minecraft/server/MinecraftServer a (LICommandListener;Ljava/lang/String;LBlockPosition;)Ljava/util/List; tabCompleteCommand
 net/minecraft/server/MinecraftServer a (Z)V saveChunks
-net/minecraft/server/MinecraftServer aD ()Lcom/mojang/authlib/GameProfileRepository; getGameProfileRepository
-net/minecraft/server/MinecraftServer aE ()LUserCache; getUserCache
-net/minecraft/server/MinecraftServer aM ()Lorg/apache/logging/log4j/Logger; getLogger
+net/minecraft/server/MinecraftServer aE ()Lcom/mojang/authlib/GameProfileRepository; getGameProfileRepository
+net/minecraft/server/MinecraftServer aF ()LUserCache; getUserCache
+net/minecraft/server/MinecraftServer aN ()Lorg/apache/logging/log4j/Logger; getLogger
 net/minecraft/server/MinecraftServer a_ (Ljava/lang/String;Ljava/lang/String;)V setResourcePack
-net/minecraft/server/MinecraftServer aa ()Ljava/lang/String; getResourcePack
+net/minecraft/server/MinecraftServer ab ()Ljava/lang/String; getResourcePack
 net/minecraft/server/MinecraftServer aa serverThread
-net/minecraft/server/MinecraftServer ab ()Ljava/lang/String; getResourcePackHash
-net/minecraft/server/MinecraftServer ac ()Z getSnooperEnabled
-net/minecraft/server/MinecraftServer ae ()Z getOnlineMode
-net/minecraft/server/MinecraftServer af ()Z getSpawnAnimals
-net/minecraft/server/MinecraftServer ag ()Z getSpawnNPCs
-net/minecraft/server/MinecraftServer ai ()Z getPVP
-net/minecraft/server/MinecraftServer aj ()Z getAllowFlight
-net/minecraft/server/MinecraftServer ak ()Z getEnableCommandBlock
-net/minecraft/server/MinecraftServer al ()Ljava/lang/String; getMotd
-net/minecraft/server/MinecraftServer am ()I getMaxBuildHeight
-net/minecraft/server/MinecraftServer an ()Z isStopped
-net/minecraft/server/MinecraftServer ao ()LPlayerList; getPlayerList
-net/minecraft/server/MinecraftServer av ()I getSpawnProtection
-net/minecraft/server/MinecraftServer aw ()Z getForceGamemode
-net/minecraft/server/MinecraftServer az ()I getIdleTimeout
+net/minecraft/server/MinecraftServer ac ()Ljava/lang/String; getResourcePackHash
+net/minecraft/server/MinecraftServer ad ()Z getSnooperEnabled
+net/minecraft/server/MinecraftServer af ()Z getOnlineMode
+net/minecraft/server/MinecraftServer ag ()Z getSpawnAnimals
+net/minecraft/server/MinecraftServer ah ()Z getSpawnNPCs
+net/minecraft/server/MinecraftServer aj ()Z getPVP
+net/minecraft/server/MinecraftServer ak ()Z getAllowFlight
+net/minecraft/server/MinecraftServer al ()Z getEnableCommandBlock
+net/minecraft/server/MinecraftServer am ()Ljava/lang/String; getMotd
+net/minecraft/server/MinecraftServer an ()I getMaxBuildHeight
+net/minecraft/server/MinecraftServer ao ()Z isStopped
+net/minecraft/server/MinecraftServer ap ()LPlayerList; getPlayerList
+net/minecraft/server/MinecraftServer aw ()I getSpawnProtection
+net/minecraft/server/MinecraftServer ax ()Z getForceGamemode
+net/minecraft/server/MinecraftServer aA ()I getIdleTimeout
 net/minecraft/server/MinecraftServer b (I)V setPort
 net/minecraft/server/MinecraftServer c methodProfiler
 net/minecraft/server/MinecraftServer d worldServer
@@ -2230,11 +2230,11 @@ net/minecraft/server/MinecraftServer l (Ljava/lang/String;)V setMotd
 net/minecraft/server/MinecraftServer n ()LEnumDifficulty; getDifficulty
 net/minecraft/server/MinecraftServer o universe
 net/minecraft/server/MinecraftServer o ()Z isHardcore
-net/minecraft/server/MinecraftServer s ()V stop
-net/minecraft/server/MinecraftServer t ()Ljava/lang/String; getServerIp
-net/minecraft/server/MinecraftServer u ()Z isRunning
+net/minecraft/server/MinecraftServer t ()V stop
+net/minecraft/server/MinecraftServer u ()Ljava/lang/String; getServerIp
+net/minecraft/server/MinecraftServer v ()Z isRunning
 net/minecraft/server/MinecraftServer t serverIp
-net/minecraft/server/MinecraftServer v ()V safeShutdown
+net/minecraft/server/MinecraftServer w ()V safeShutdown
 net/minecraft/server/MinecraftServer w isRunning
 net/minecraft/server/MinecraftServer x isStopped
 net/minecraft/server/MinecraftServer y ticks
@@ -2323,7 +2323,7 @@ NBTTagCompound a (Ljava/lang/String;[I)V setIntArray
 NBTTagCompound b (Ljava/lang/String;I)Z hasKeyOfType
 NBTTagCompound c (Ljava/lang/String;)Z hasKey
 NBTTagCompound c (Ljava/lang/String;I)LNBTTagList; getList
-NBTTagCompound c map
+NBTTagCompound b map
 NBTTagCompound d (Ljava/lang/String;)B getByte
 NBTTagCompound e (Ljava/lang/String;)S getShort
 NBTTagCompound f (Ljava/lang/String;)I getInt
@@ -2472,8 +2472,8 @@ PlayerList e (LEntityPlayer;)V disconnect
 PlayerList e (Lcom/mojang/authlib/GameProfile;)Z isWhitelisted
 PlayerList i players
 PlayerList f (LEntityPlayer;)V updateClient
-PlayerList f (Lcom/mojang/authlib/GameProfile;)LEntityPlayer; processLogin
-PlayerList g (Lcom/mojang/authlib/GameProfile;)Z isOp
+PlayerList g (Lcom/mojang/authlib/GameProfile;)LEntityPlayer; processLogin
+PlayerList h (Lcom/mojang/authlib/GameProfile;)Z isOp
 PlayerList e maxPlayers
 PlayerList h ()LGameProfileBanList; getProfileBans
 PlayerList i ()LIpBanList; getIPBans
@@ -2897,5 +2897,19 @@ WorldType g DEBUG_ALL_BLOCK_STATES
 WorldType h NORMAL_1_1
 WorldType j name
 WorldType k version
+BlockFire T flameChances
+NetworkManager k channel
+EntityPlayer z ()V resetIdleTimer
+EntityHuman v ()Z isSpectator
+EntityPlayer e (LEntity;)V setSpectatorTarget
+WorldData y ()LEnumDifficulty; getDifficulty
+WorldData z ()Z isDifficultyLocked
+GenericAttributes e ATTACK_DAMAGE
+GenericAttributes d MOVEMENT_SPEED
+GenericAttributes b FOLLOW_RANGE
+EntityGuardian br goalRandomStroll
+EntityGuardian a (Z)V setElder
+EntityGuardian cn ()Z isElder
+PathfinderGoalRandomStroll b (I)V setTimeBetweenMovement
 
 
