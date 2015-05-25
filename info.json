@@ -1,8 +1,8 @@
 {
-	"minecraftVersion": "1.8.5",
-	"accessTransforms": "bukkit-1.8.5.at",
-	"classMappings": "bukkit-1.8.5-cl.csrg",
-	"memberMappings": "bukkit-1.8.5-members.csrg",
+	"minecraftVersion": "1.8.6",
+	"accessTransforms": "bukkit-1.8.6.at",
+	"classMappings": "bukkit-1.8.6-cl.csrg",
+	"memberMappings": "bukkit-1.8.6-members.csrg",
 	"packageMappings": "package.srg"
 }
 
