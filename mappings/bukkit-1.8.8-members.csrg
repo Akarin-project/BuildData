@@ -2377,8 +2377,8 @@ PacketPlayInWindowClick e item
 PacketPlayInWindowClick f shift
 PacketPlayOutBlockChange b block
 PacketPlayOutSpawnPosition a position
-PacketStatusListener a minecraftServer
-PacketStatusListener b networkManager
+PacketStatusListener b minecraftServer
+PacketStatusListener c networkManager
 EntityEnderman$PathfinderGoalEndermanPickupBlock a enderman
 EntitySilverfish$PathfinderGoalSilverfishHideInBlock a silverfish
 EntitySilverfish$PathfinderGoalSilverfishWakeOthers a silverfish
