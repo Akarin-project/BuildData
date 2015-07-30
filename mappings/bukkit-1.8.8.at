@@ -1,5 +1,8 @@
 public net/minecraft/server/BlockDispenser/dispense(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
 
+# No inheritance in AT :(
+public net/minecraft/server/BlockDropper/dispense(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
+
 public net/minecraft/server/BlockJukeBox/dropRecord(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;Lnet/minecraft/server/IBlockData;)V
 
 public net/minecraft/server/BlockRedstoneWire/getPower(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;I)I
@@ -19,6 +22,7 @@ public net/minecraft/server/ChunkProviderServer/saveChunk(Lnet/minecraft/server/
 public net/minecraft/server/ContainerDispenser/items
 
 public-final net/minecraft/server/CraftingManager/recipes
+public net/minecraft/server/CraftingManager/<init>()V
 
 public net/minecraft/server/DedicatedServer/propertyManager
 
@@ -38,6 +42,8 @@ public net/minecraft/server/EntityArmorStand/setBasePlate(Z)V
 
 public net/minecraft/server/EntityArrow/knockbackStrength
 
+public net/minecraft/server/EntityEnderDragon/target
+
 public net/minecraft/server/EntityExperienceOrb/value
 
 public net/minecraft/server/EntityFireworks/expectedLifespan
@@ -56,8 +62,8 @@ public net/minecraft/server/EntityHuman/sleeping
 public net/minecraft/server/EntityHuman/sleepTicks
 public net/minecraft/server/EntityHuman/closeInventory()V
 
-public net/minecraft/server/EntityInsentient/goalSelector
-public net/minecraft/server/EntityInsentient/targetSelector
+public-final net/minecraft/server/EntityInsentient/goalSelector
+public-final net/minecraft/server/EntityInsentient/targetSelector
 public net/minecraft/server/EntityInsentient/dropChances
 public net/minecraft/server/EntityInsentient/canPickUpLoot
 public net/minecraft/server/EntityInsentient/persistent
@@ -110,6 +116,9 @@ public net/minecraft/server/MobSpawnerAbstract/spawnDelay
 public net/minecraft/server/MobSpawnerAbstract/getMobName()Ljava/lang/String;
 
 public net/minecraft/server/NetworkManager/channel
+
+public net/minecraft/server/PacketHandshakingInSetProtocol/hostname
+public net/minecraft/server/PacketHandshakingInSetProtocol/port
 
 public net/minecraft/server/PacketPlayOutBlockChange/block
 

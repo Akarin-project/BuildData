@@ -90,6 +90,7 @@ Block a (LWorld;LBlockPosition;LIBlockData;FI)V dropNaturally
 Block a (LWorld;LBlockPosition;LIBlockData;LBlock;)V doPhysics
 Block a (LWorld;LBlockPosition;LIBlockData;LEntityHuman;LEnumDirection;FFF)Z interact
 Block a (LWorld;LBlockPosition;LIBlockData;LEntityLiving;LItemStack;)V postPlace
+Block a (LWorld;LBlockPosition;LEntity;F)V fallOn
 Block b (Ljava/lang/String;)LBlock; getByName
 Block b (LWorld;LBlockPosition;I)V dropExperience
 Block b (LWorld;LBlockPosition;LIBlockData;)V remove
@@ -143,6 +144,7 @@ BlockDirt b SNOWY
 BlockDispenser a FACING
 BlockDispenser b TRIGGERED
 BlockDispenser f (LWorld;LBlockPosition;)V dispense
+BlockDispenser N REGISTRY
 BlockDoor N HINGE
 BlockDoor O POWERED
 BlockDoor P HALF
@@ -208,6 +210,7 @@ BlockMycel a SNOWY
 BlockNetherWart a AGE
 BlockPiston a FACING
 BlockPiston b EXTENDED
+BlockPiston N sticky
 BlockPistonExtension N SHORT
 BlockPistonExtension a FACING
 BlockPistonExtension b TYPE
@@ -215,6 +218,10 @@ BlockPistonMoving a FACING
 BlockPistonMoving b TYPE
 BlockPlant d (LWorld;LBlockPosition;)Z canPlace
 BlockPortal a AXIS
+BlockPortal$Shape f position
+BlockPortal$Shape g height
+BlockPortal$Shape h width
+BlockPortal$Shape e ()V createPortal
 BlockPosition a ()LBlockPosition; up
 BlockPosition a (J)LBlockPosition; fromLong
 BlockPosition a (LEnumDirection;)LBlockPosition; shift
@@ -234,8 +241,10 @@ BlockPosition g ()J asLong
 BlockPosition g (I)LBlockPosition; east
 BlockPoweredRail N POWERED
 BlockPoweredRail b SHAPE
+BlockPressurePlateAbstract a (LBlockPosition;)LAxisAlignedBB; getBoundingBox
 BlockPressurePlateBinary a POWERED
 BlockPressurePlateWeighted a POWER
+BlockPressurePlateWeighted b weight
 BlockPrismarine a VARIANT
 BlockPumpkin N ironGolemPart
 BlockPumpkin P ironGolem
@@ -319,6 +328,7 @@ BlockVine O SOUTH
 BlockVine P WEST
 BlockVine a UP
 BlockVine b NORTH
+BlockVine a (LEnumDirection;)LBlockStateBoolean; getDirection
 BlockWallSign a FACING
 BlockWood a VARIANT
 BlockWoodenStep b VARIANT
@@ -616,6 +626,7 @@ Container a (LIInventory;I)LSlot; getSlot
 Container d windowId
 Container e listeners
 Container f dragType
+ContainerBeacon a beacon
 ContainerBrewingStand a brewingStand
 ContainerChest a container
 ContainerDispenser a items
@@ -890,6 +901,7 @@ EntityDamageSource b (LEntityLiving;)LIChatBaseComponent; getLocalizedDeathMessa
 EntityDamageSource j ()LEntity; getEntity
 EntityDamageSourceIndirect r owner
 EntityEnderDragon bm children
+EntityEnderDragon bA target
 EntityEnderDragon e (LDamageSource;F)Z dealDamage
 EntityEnderman a (LIBlockData;)V setCarried
 EntityEnderman cm ()LIBlockData; getCarried
@@ -951,6 +963,7 @@ EntityHuman a (LItemStack;)V openBook
 EntityHuman a (LItemStack;Z)LEntityItem; drop
 EntityHuman a (LTileEntitySign;)V openSign
 EntityHuman a (LWorld;LBlockPosition;Z)LBlockPosition; getBed
+EntityHuman b (I)V enchantDone
 EntityHuman a enderChest
 EntityHuman b sleepTicks
 EntityHuman bC expTotal
@@ -1696,6 +1709,7 @@ EnumWorldBorderState b SHRINKING
 EnumWorldBorderState c STATIONARY
 ExpirableListEntry c ()Ljava/util/Date; getExpires
 ExpirableListEntry d ()Ljava/lang/String; getReason
+Explosion c ()LEntityLiving; getSource
 Explosion d ()V clearBlocks
 Explosion d world
 Explosion e ()Ljava/util/List; getBlocks
@@ -1854,6 +1868,7 @@ ItemFood h (LItemStack;)I getNutrition
 ItemFood i (LItemStack;)F getSaturationModifier
 ItemMultiTexture a (I)I filterData
 ItemStack A ()I getRepairCost
+ItemStack a (I)LItemStack; cloneAndSubtract
 ItemStack a (ILjava/util/Random;)Z isDamaged
 ItemStack a (ILEntityLiving;)V damage
 ItemStack a (LEnchantment;I)V addEnchantment
@@ -2911,5 +2926,11 @@ EntityGuardian br goalRandomStroll
 EntityGuardian a (Z)V setElder
 EntityGuardian cn ()Z isElder
 PathfinderGoalRandomStroll b (I)V setTimeBetweenMovement
-
-
+PacketHandshakingInSetProtocol b hostname
+PacketHandshakingInSetProtocol c port
+ShapeDetectorBlock d ()LBlockPosition; getPosition
+IRecipe a (LInventoryCrafting;)LItemStack; craftItem
+IDispenseBehavior a NONE
+IDispenseBehavior a(LISourceBlock;LItemStack;)LItemStack; dispense
+DispenseBehaviorProjectile b ()F getPower
+ISource i ()LWorld; getWorld
