@@ -1893,9 +1893,9 @@ Item a (LItem;)I getId
 Item a (LItemStack;LIBlockData;)F getDestroySpeed
 Item c (I)LItem; getById
 Item e (I)LItem; setMaxDurability
-Item f REGISTRY
+Item g REGISTRY
 Item j ()I getMaxStackSize
-Item j maxStackSize
+Item k maxStackSize
 Item l ()I getMaxDurability
 Item m ()Z usesDurability
 Item o durability
@@ -2758,9 +2758,9 @@ SoundCategory g NEUTRAL
 SoundCategory h PLAYERS
 SoundCategory i AMBIENT
 SoundCategory j VOICE
-SoundEffects dW ENTITY_PLAYER_ATTACK_CRIT
-SoundEffects dr BLOCK_METAL_PRESSUREPLATE_CLICK_OFF
-SoundEffects eg ENTITY_PLAYER_HURT
+SoundEffects dX ENTITY_PLAYER_ATTACK_CRIT
+SoundEffects ds BLOCK_METAL_PRESSUREPLATE_CLICK_OFF
+SoundEffects eh ENTITY_PLAYER_HURT
 SpawnerCreature a (LWorld;II)LBlockPosition; getRandomPosition
 Statistic e name
 StatisticList a (Ljava/lang/String;)LStatistic; getStatistic
