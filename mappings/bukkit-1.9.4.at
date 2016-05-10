@@ -10,10 +10,13 @@ public net/minecraft/server/BossBattle/color
 public net/minecraft/server/BossBattle/style
 public net/minecraft/server/BossBattle/title
 public net/minecraft/server/BossBattleServer/sendUpdate(Lnet/minecraft/server/PacketPlayOutBoss$Action;)V
+public net/minecraft/server/BossBattleServer/visible
 public net/minecraft/server/Chunk/entitySlices
 public net/minecraft/server/Chunk/heightMap
 public net/minecraft/server/Chunk/tileEntities
 public net/minecraft/server/Chunk/world
+public net/minecraft/server/ChunkProviderServer/chunkGenerator
+public net/minecraft/server/ChunkProviderServer/chunks
 public net/minecraft/server/ChunkProviderServer/loadChunk(II)Lnet/minecraft/server/Chunk;
 public net/minecraft/server/ChunkProviderServer/saveChunk(Lnet/minecraft/server/Chunk;)V
 public net/minecraft/server/ChunkProviderServer/saveChunkNOP(Lnet/minecraft/server/Chunk;)V
@@ -78,9 +81,11 @@ public net/minecraft/server/EntityPlayer/invulnerableTicks
 public net/minecraft/server/EntityPlayer/lastSentExp
 public net/minecraft/server/EntityPlayer/nextContainerCounter()V
 public net/minecraft/server/EntityPlayer/removeQueue
+public net/minecraft/server/EntityPotion/isLingering()Z
 public net/minecraft/server/EntityProjectile/shooter
 public net/minecraft/server/EntityProjectile/shooterName
 public net/minecraft/server/EntitySlime/setSize(I)V
+public net/minecraft/server/EntitySpectralArrow/duration
 public net/minecraft/server/EntityTracker/trackedEntities
 public net/minecraft/server/EntityTrackerEntry/trackedPlayers
 public net/minecraft/server/EntityVillager/inventory
@@ -92,6 +97,7 @@ public net/minecraft/server/FoodMetaData/foodLevel
 public net/minecraft/server/FoodMetaData/saturationLevel
 public net/minecraft/server/InventoryLargeChest/left
 public net/minecraft/server/InventoryLargeChest/right
+public net/minecraft/server/InventoryMerchant/selectedIndex
 public net/minecraft/server/InventorySubcontainer/items
 public net/minecraft/server/JsonListEntry/getKey()Ljava/lang/Object;
 public net/minecraft/server/MerchantRecipe/buyingItem1
@@ -121,6 +127,8 @@ public net/minecraft/server/RecipesFurnace/recipes
 public net/minecraft/server/Slot/index
 public net/minecraft/server/TileEntityBanner/color
 public net/minecraft/server/TileEntityBanner/patterns
+public net/minecraft/server/TileEntityEndGateway/exitPortal
+public net/minecraft/server/TileEntityEndGateway/exactTeleport
 public net/minecraft/server/TileEntitySign/isEditable
 public net/minecraft/server/World/allowAnimals
 public net/minecraft/server/World/allowMonsters
