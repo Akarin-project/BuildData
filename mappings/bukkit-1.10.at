@@ -20,6 +20,7 @@ public net/minecraft/server/ChunkProviderServer/chunks
 public net/minecraft/server/ChunkProviderServer/loadChunk(II)Lnet/minecraft/server/Chunk;
 public net/minecraft/server/ChunkProviderServer/saveChunk(Lnet/minecraft/server/Chunk;)V
 public net/minecraft/server/ChunkProviderServer/saveChunkNOP(Lnet/minecraft/server/Chunk;)V
+public net/minecraft/server/ChunkProviderServer/unloadQueue
 public net/minecraft/server/ChunkProviderServer/world
 public net/minecraft/server/ContainerDispenser/items
 public net/minecraft/server/CraftingManager/<init>()V
@@ -46,7 +47,6 @@ public net/minecraft/server/EntityArmorStand/rightArmPose
 public net/minecraft/server/EntityArmorStand/rightLegPose
 public net/minecraft/server/EntityArmorStand/setArms(Z)V
 public net/minecraft/server/EntityArmorStand/setBasePlate(Z)V
-public net/minecraft/server/EntityArmorStand/setGravity(Z)V
 public net/minecraft/server/EntityArmorStand/setMarker(Z)V
 public net/minecraft/server/EntityArmorStand/setSmall(Z)V
 public net/minecraft/server/EntityArrow/knockbackStrength
@@ -81,11 +81,13 @@ public net/minecraft/server/EntityPlayer/invulnerableTicks
 public net/minecraft/server/EntityPlayer/lastSentExp
 public net/minecraft/server/EntityPlayer/nextContainerCounter()V
 public net/minecraft/server/EntityPlayer/removeQueue
+public net/minecraft/server/EntityPlayer/worldChangeInvuln
 public net/minecraft/server/EntityPotion/isLingering()Z
 public net/minecraft/server/EntityProjectile/shooter
 public net/minecraft/server/EntityProjectile/shooterName
 public net/minecraft/server/EntitySlime/setSize(I)V
 public net/minecraft/server/EntitySpectralArrow/duration
+public net/minecraft/server/EntityTippedArrow/effects
 public net/minecraft/server/EntityTracker/trackedEntities
 public net/minecraft/server/EntityTrackerEntry/trackedPlayers
 public net/minecraft/server/EntityVillager/inventory
@@ -127,15 +129,17 @@ public net/minecraft/server/RecipesFurnace/recipes
 public net/minecraft/server/Slot/index
 public net/minecraft/server/TileEntityBanner/color
 public net/minecraft/server/TileEntityBanner/patterns
-public net/minecraft/server/TileEntityEndGateway/exitPortal
 public net/minecraft/server/TileEntityEndGateway/exactTeleport
+public net/minecraft/server/TileEntityEndGateway/exitPortal
 public net/minecraft/server/TileEntitySign/isEditable
+public net/minecraft/server/TileEntitySkull/rotation
 public net/minecraft/server/World/allowAnimals
 public net/minecraft/server/World/allowMonsters
 public net/minecraft/server/World/scoreboard
 public net/minecraft/server/World/worldData
 public net/minecraft/server/World/worldMaps
 
+public-final net/minecraft/server/ContainerEnchantTable/world
 public-final net/minecraft/server/CraftingManager/recipes
 public-final net/minecraft/server/EntityAreaEffectCloud/effects
 public-final net/minecraft/server/EntityInsentient/goalSelector
