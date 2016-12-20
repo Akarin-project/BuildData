@@ -877,7 +877,7 @@ DamageSource r FALLING_BLOCK
 DamageSource s ()Z isMagic
 DamageSource s DRAGON_BREATH
 DamageSource t ()LDamageSource; setMagic
-DamageSource t translationIndex
+DamageSource u translationIndex
 DataConverterTypes a LEVEL
 DataConverterTypes b PLAYER
 DataConverterTypes c CHUNK
@@ -923,9 +923,9 @@ Enchantment$Rarity b UNCOMMON
 Enchantment$Rarity c RARE
 Enchantment$Rarity d VERY_RARE
 EnchantmentManager a (LEnchantment;LItemStack;)I getEnchantmentLevel
-EnchantmentManager b (LEntityLiving;)I getFireAspectEnchantmentLevel
-EnchantmentManager c (LEntityLiving;)I getOxygenEnchantmentLevel
-EnchantmentManager e (LEntityLiving;)I getDigSpeedEnchantmentLevel
+EnchantmentManager c (LEntityLiving;)I getFireAspectEnchantmentLevel
+EnchantmentManager d (LEntityLiving;)I getOxygenEnchantmentLevel
+EnchantmentManager f (LEntityLiving;)I getDigSpeedEnchantmentLevel
 EnchantmentProtection$DamageType a ALL
 EnchantmentProtection$DamageType b FIRE
 EnchantmentProtection$DamageType c FALL
@@ -944,7 +944,8 @@ EnchantmentSlotType i FISHING_ROD
 EnchantmentSlotType j BREAKABLE
 EnchantmentSlotType k BOW
 EnchantmentSlotType l WEARABLE
-Enchantments A LURE
+Enchantments A LUCK
+Enchantments B LURE
 Enchantments a PROTECTION_ENVIRONMENTAL
 Enchantments b PROTECTION_FIRE
 Enchantments c PROTECTION_FALL
@@ -960,15 +961,14 @@ Enchantments n DAMAGE_ARTHROPODS
 Enchantments o KNOCKBACK
 Enchantments p FIRE_ASPECT
 Enchantments q LOOT_BONUS_MOBS
-Enchantments r DIG_SPEED
-Enchantments s SILK_TOUCH
-Enchantments t DURABILITY
-Enchantments u LOOT_BONUS_BLOCKS
-Enchantments v ARROW_DAMAGE
-Enchantments w ARROW_KNOCKBACK
-Enchantments x ARROW_FIRE
-Enchantments y ARROW_INFINITE
-Enchantments z LUCK
+Enchantments s DIG_SPEED
+Enchantments t SILK_TOUCH
+Enchantments u DURABILITY
+Enchantments v LOOT_BONUS_BLOCKS
+Enchantments w ARROW_DAMAGE
+Enchantments x ARROW_KNOCKBACK
+Enchantments y ARROW_FIRE
+Enchantments z ARROW_INFINITE
 Entity A positionChanged
 Entity D velocityChanged
 Entity F dead
@@ -1173,7 +1173,7 @@ EntityCreeper do ()V do_
 EntityCreeper o ()Z isPowered
 EntityDamageSource c (LEntityLiving;)LIChatBaseComponent; getLocalizedDeathMessage
 EntityDamageSource j ()LEntity; getEntity
-EntityDamageSourceIndirect v owner
+EntityDamageSourceIndirect w owner
 EntityEnderCrystal a (LBlockPosition;)V setBeamTarget
 EntityEnderCrystal a (Z)V setShowingBottom
 EntityEnderCrystal j ()LBlockPosition; getBeamTarget
@@ -1204,8 +1204,8 @@ EntityFireball b dirX
 EntityFireball c dirY
 EntityFireball d dirZ
 EntityFireworks a FIREWORK_ITEM
-EntityFireworks b ticksFlown
-EntityFireworks c expectedLifespan
+EntityFireworks c ticksFlown
+EntityFireworks d expectedLifespan
 EntityFishingHook a hooked
 EntityFishingHook c isInGround
 EntityFishingHook e owner
@@ -2452,9 +2452,9 @@ NBTTagCompound a (Ljava/lang/String;Z)V setBoolean
 NBTTagCompound a (Ljava/lang/String;[B)V setByteArray
 NBTTagCompound a (Ljava/lang/String;[I)V setIntArray
 NBTTagCompound b (Ljava/lang/String;I)Z hasKeyOfType
-NBTTagCompound b map
 NBTTagCompound c (Ljava/lang/String;)LNBTBase; get
 NBTTagCompound c (Ljava/lang/String;I)LNBTTagList; getList
+NBTTagCompound c map
 NBTTagCompound e (Ljava/lang/String;)Z hasKey
 NBTTagCompound f (Ljava/lang/String;)B getByte
 NBTTagCompound g (Ljava/lang/String;)S getShort
@@ -3040,10 +3040,10 @@ World c (LBlockPosition;LBlock;II)V playBlockAction
 World c (LBlockPosition;LEnumDirection;)I getBlockFacePower
 World c tileEntityListUnload
 World d ()V doTick
+World d (LAxisAlignedBB;)Z containsLiquid
 World d (LBlockPosition;LBlock;)V updateAdjacentComparators
 World d (LEntity;)Z strikeLightning
 World e ()V everyoneSleeping
-World e (LAxisAlignedBB;)Z containsLiquid
 World e (LBlockPosition;)Z isLoaded
 World e (LEntity;)V kill
 World e entityList
