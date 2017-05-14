@@ -1,11 +1,17 @@
-# (c) 2016 SpigotMC Pty. Ltd.
+# (c) 2017 SpigotMC Pty. Ltd.
 
 # No inheritance in AT :(
 public net/minecraft/server/BlockDispenser/dispense(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
 public net/minecraft/server/BlockDropper/dispense(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
 
+public net/minecraft/server/AdvancementDataPlayer/data
+public net/minecraft/server/AdvancementDataWorld/DESERIALIZER
+public net/minecraft/server/AdvancementDataWorld/REGISTRY
+public net/minecraft/server/AdvancementDataWorld/folder
+public net/minecraft/server/Advancements/advancements
 public net/minecraft/server/BlockJukeBox/dropRecord(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;Lnet/minecraft/server/IBlockData;)V
 public net/minecraft/server/BlockRedstoneWire/getPower(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;I)I
+public net/minecraft/server/BlockShulkerBox/color
 public net/minecraft/server/BossBattle/color
 public net/minecraft/server/BossBattle/style
 public net/minecraft/server/BossBattle/title
@@ -22,13 +28,14 @@ public net/minecraft/server/ChunkProviderServer/saveChunk(Lnet/minecraft/server/
 public net/minecraft/server/ChunkProviderServer/saveChunkNOP(Lnet/minecraft/server/Chunk;)V
 public net/minecraft/server/ChunkProviderServer/unloadQueue
 public net/minecraft/server/ChunkProviderServer/world
+public net/minecraft/server/ContainerAnvil/renameText
 public net/minecraft/server/ContainerDispenser/items
-public net/minecraft/server/CraftingManager/<init>()V
 public net/minecraft/server/DedicatedServer/propertyManager
 public net/minecraft/server/DedicatedServer/remoteControlCommandListener
 public net/minecraft/server/Entity/fireTicks
 public net/minecraft/server/Entity/getFlag(I)Z
 public net/minecraft/server/Entity/getMaxFireTicks()I
+public net/minecraft/server/Entity/getSaveID()Ljava/lang/String;
 public net/minecraft/server/Entity/glowing
 public net/minecraft/server/Entity/inWater
 public net/minecraft/server/Entity/passengers
@@ -64,10 +71,14 @@ public net/minecraft/server/EntityHanging/blockPosition
 public net/minecraft/server/EntityHanging/setDirection(Lnet/minecraft/server/EnumDirection;)V
 public net/minecraft/server/EntityHorseAbstract/attributeJumpStrength
 public net/minecraft/server/EntityHorseAbstract/inventoryChest
+public net/minecraft/server/EntityHorseAbstract/loadChest()V
 public net/minecraft/server/EntityHuman/closeInventory()V
 public net/minecraft/server/EntityHuman/getMaxFireTicks()I
+public net/minecraft/server/EntityHuman/setShoulderEntityLeft(Lnet/minecraft/server/NBTTagCompound;)V
+public net/minecraft/server/EntityHuman/setShoulderEntityRight(Lnet/minecraft/server/NBTTagCompound;)V
 public net/minecraft/server/EntityHuman/sleepTicks
 public net/minecraft/server/EntityHuman/sleeping
+public net/minecraft/server/EntityIllagerWizard/getSpell()Lnet/minecraft/server/EntityIllagerWizard$Spell;
 public net/minecraft/server/EntityInsentient/canPickUpLoot
 public net/minecraft/server/EntityInsentient/dropChanceArmor
 public net/minecraft/server/EntityInsentient/dropChanceHand
@@ -80,6 +91,7 @@ public net/minecraft/server/EntityLiving/killer
 public net/minecraft/server/EntityLiving/lastDamage
 public net/minecraft/server/EntityLiving/lastDamager
 public net/minecraft/server/EntityLiving/updateEffects
+public net/minecraft/server/EntityLlama/setStrength(I)V
 public net/minecraft/server/EntityMinecartCommandBlock/COMMAND
 public net/minecraft/server/EntityPigZombie/angerLevel
 public net/minecraft/server/EntityPlayer/invulnerableTicks
@@ -90,9 +102,11 @@ public net/minecraft/server/EntityPlayer/worldChangeInvuln
 public net/minecraft/server/EntityPotion/isLingering()Z
 public net/minecraft/server/EntityProjectile/shooter
 public net/minecraft/server/EntityProjectile/shooterName
+public net/minecraft/server/EntityShulker/COLOR
 public net/minecraft/server/EntitySlime/setSize(IZ)V
 public net/minecraft/server/EntitySpectralArrow/duration
 public net/minecraft/server/EntityTippedArrow/effects
+public net/minecraft/server/EntityTippedArrow/setColor(I)V
 public net/minecraft/server/EntityTracker/trackedEntities
 public net/minecraft/server/EntityTrackerEntry/trackedPlayers
 public net/minecraft/server/EntityVillager/inventory
@@ -102,10 +116,15 @@ public net/minecraft/server/Explosion/source
 public net/minecraft/server/FoodMetaData/exhaustionLevel
 public net/minecraft/server/FoodMetaData/foodLevel
 public net/minecraft/server/FoodMetaData/saturationLevel
+public net/minecraft/server/InventoryCrafting/container
 public net/minecraft/server/InventoryLargeChest/left
 public net/minecraft/server/InventoryLargeChest/right
 public net/minecraft/server/InventoryMerchant/selectedIndex
 public net/minecraft/server/InventorySubcontainer/items
+public net/minecraft/server/ItemCooldown$Info
+public net/minecraft/server/ItemCooldown$Info/endTick
+public net/minecraft/server/ItemCooldown/cooldowns
+public net/minecraft/server/ItemCooldown/currentTick
 public net/minecraft/server/JsonListEntry/getKey()Ljava/lang/Object;
 public net/minecraft/server/MerchantRecipe/buyingItem1
 public net/minecraft/server/MerchantRecipe/buyingItem2
@@ -114,6 +133,7 @@ public net/minecraft/server/MerchantRecipe/rewardExp
 public net/minecraft/server/MerchantRecipe/sellingItem
 public net/minecraft/server/MerchantRecipe/uses
 public net/minecraft/server/MinecraftServer/LOGGER
+public net/minecraft/server/MinecraftServer/dataConverterManager
 public net/minecraft/server/MobEffectList/durationModifier
 public net/minecraft/server/MobSpawnerAbstract/getMobName()Lnet/minecraft/server/MinecraftKey;
 public net/minecraft/server/MobSpawnerAbstract/spawnDelay
@@ -132,6 +152,7 @@ public net/minecraft/server/PlayerList/sendScoreboard(Lnet/minecraft/server/Scor
 public net/minecraft/server/PropertyManager/properties
 public net/minecraft/server/RecipesFurnace/<init>()V
 public net/minecraft/server/RecipesFurnace/recipes
+public net/minecraft/server/RecipeItemStack/choices
 public net/minecraft/server/Slot/index
 public net/minecraft/server/TileEntityBanner/color
 public net/minecraft/server/TileEntityBanner/patterns
@@ -157,5 +178,7 @@ public-final net/minecraft/server/EntityLiving/combatTracker
 private-final net/minecraft/server/ItemStack/item
 public-final net/minecraft/server/MinecraftServer/convertable
 public-final net/minecraft/server/MinecraftServer/universe
+private+synchronized net/minecraft/server/RegionFile/getOffset(II)I
+public+synchronized net/minecraft/server/RegionFileCache/chunkExists(Ljava/io/File;II)Z
 public-final net/minecraft/server/World/worldProvider
 public-final net/minecraft/server/WorldServer/tracker
