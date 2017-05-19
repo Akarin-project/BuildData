@@ -28,6 +28,7 @@ public net/minecraft/server/ChunkProviderServer/saveChunk(Lnet/minecraft/server/
 public net/minecraft/server/ChunkProviderServer/saveChunkNOP(Lnet/minecraft/server/Chunk;)V
 public net/minecraft/server/ChunkProviderServer/unloadQueue
 public net/minecraft/server/ChunkProviderServer/world
+public net/minecraft/server/CommandListenerWrapper/base
 public net/minecraft/server/ContainerAnvil/renameText
 public net/minecraft/server/ContainerDispenser/items
 public net/minecraft/server/DedicatedServer/propertyManager

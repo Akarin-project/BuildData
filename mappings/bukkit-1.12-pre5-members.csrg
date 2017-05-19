@@ -1,8 +1,8 @@
 # (c) 2017 SpigotMC Pty. Ltd.
 Advancement f ()Ljava/util/Map; getCriteria
 Advancement h ()LMinecraftKey; getName
-AdvancementDataPlayer a (LAdvancement;)LAdvancementProgress; getProgress
 AdvancementDataPlayer a (LAdvancement;Ljava/lang/String;)Z grantCriteria
+AdvancementDataPlayer b (LAdvancement;)LAdvancementProgress; getProgress
 AdvancementDataPlayer b (LAdvancement;Ljava/lang/String;)Z revokeCritera
 AdvancementDataPlayer f data
 AdvancementDataPlayer j player
@@ -73,11 +73,11 @@ Block b (Ljava/lang/String;)LBlock; getByName
 Block b creativeTab
 Block c ()Ljava/lang/String; getName
 Block c (I)LBlock; getById
-Block c (LIBlockData;LIBlockAccess;LBlockPosition;)LIBlockData; updateState
 Block c (LWorld;LBlockPosition;LIBlockData;)V onPlace
 Block c blockData
 Block d (I)LIBlockData; getByCombinedId
 Block d (LIBlockData;)I getDropData
+Block d (LIBlockData;LIBlockAccess;LBlockPosition;)LIBlockData; updateState
 Block d (LWorld;LBlockPosition;LIBlockData;)V postBreak
 Block d name
 Block e (LIBlockData;)I toLegacyData
@@ -89,12 +89,12 @@ Block k ()Z isTicking
 Block l ()Z isTileEntity
 Block q strength
 Block r durability
+Block s (LIBlockData;)Z isOccluding
 Block t ()LIBlockData; getBlockData
-Block t (LIBlockData;)Z isOccluding
 Block u isTileEntity
 Block v ()LSoundEffectType; getStepSound
 Block v stepSound
-Block x (LIBlockData;)Z isComplexRedstone
+Block w (LIBlockData;)Z isComplexRedstone
 Block x material
 Block z frictionFactor
 Block$EnumRandomOffset a NONE
@@ -133,7 +133,7 @@ BlockCrops a (LWorld;LBlockPosition;LIBlockData;FI)V dropNaturally
 BlockCrops b (I)LIBlockData; setAge
 BlockCrops c AGE
 BlockDaylightDetector a POWER
-BlockDiodeAbstract D (LIBlockData;)Z isDiode
+BlockDiodeAbstract C (LIBlockData;)Z isDiode
 BlockDirectional H FACING
 BlockDirt a VARIANT
 BlockDirt b SNOWY
@@ -820,12 +820,20 @@ ChunkSection i ()LNibbleArray; getSkyLightArray
 CombatTracker a (LDamageSource;FF)V trackDamage
 CombatTracker b ()LIChatBaseComponent; getDeathMessage
 CommandAbstract b ([Ljava/lang/String;I)Z isListStart
+CommandAdvancement$Action a GRANT
+CommandAdvancement$Action b REVOKE
+CommandAdvancement$Filter a ONLY
+CommandAdvancement$Filter b THROUGH
+CommandAdvancement$Filter c FROM
+CommandAdvancement$Filter d UNTIL
+CommandAdvancement$Filter e EVERYTHING
 CommandBlockListenerAbstract a (Ljava/lang/String;)V setCommand
 CommandBlockListenerAbstract b (Ljava/lang/String;)V setName
 CommandBlockListenerAbstract m ()Ljava/lang/String; getCommand
 CommandException a ()[Ljava/lang/Object; getArgs
 CommandGamemode b (LICommandListener;)Ljava/lang/String; getUsage
 CommandGamemode c ()Ljava/lang/String; getCommand
+CommandListenerWrapper a base
 CommandObjectiveExecutor$EnumCommandResult a SUCCESS_COUNT
 CommandObjectiveExecutor$EnumCommandResult b AFFECTED_BLOCKS
 CommandObjectiveExecutor$EnumCommandResult c AFFECTED_ENTITIES
@@ -1295,7 +1303,7 @@ EntityHuman bO abilities
 EntityHuman bP expLevel
 EntityHuman bQ expTotal
 EntityHuman bR exp
-EntityHuman bV hookedFish
+EntityHuman bU hookedFish
 EntityHuman bv inventory
 EntityHuman bw enderChest
 EntityHuman bx defaultContainer
@@ -1367,10 +1375,10 @@ EntityInsentient cW ()Z isPersistent
 EntityInsentient cY ()Z isLeashed
 EntityInsentient cZ ()LEntity; getLeashHolder
 EntityInsentient d (LEntityLiving;)V setGoalTarget
-EntityInsentient da ()Z hasAI
+EntityInsentient da ()Z isNoAI
 EntityInsentient f moveController
 EntityInsentient h navigation
-EntityInsentient n (Z)V setAI
+EntityInsentient n (Z)V setNoAI
 EntityInsentient t ()LControllerLook; getControllerLook
 EntityInsentient u ()LControllerMove; getControllerMove
 EntityInsentient w ()LControllerJump; getControllerJump
@@ -1536,14 +1544,14 @@ EntityPlayer a (LEntityPlayer;Z)V copyFrom
 EntityPlayer a (Ljava/lang/String;Ljava/lang/String;)V setResourcePack
 EntityPlayer a playerConnection
 EntityPlayer b server
-EntityPlayer bX locale
-EntityPlayer bY removeQueue
+EntityPlayer bW locale
+EntityPlayer bX removeQueue
 EntityPlayer c playerInteractManager
-EntityPlayer ch lastHealthSent
-EntityPlayer ck lastSentExp
-EntityPlayer cl invulnerableTicks
-EntityPlayer cq worldChangeInvuln
-EntityPlayer cx containerCounter
+EntityPlayer cg lastHealthSent
+EntityPlayer cj lastSentExp
+EntityPlayer ck invulnerableTicks
+EntityPlayer cp worldChangeInvuln
+EntityPlayer cw containerCounter
 EntityPlayer du ()Z canPvP
 EntityPlayer dv ()V nextContainerCounter
 EntityPlayer e (LEntity;)V setSpectatorTarget
@@ -1948,7 +1956,7 @@ IBlockAccess o (LBlockPosition;)LIBlockData; getType
 IBlockAccess r (LBlockPosition;)LTileEntity; getTileEntity
 IBlockData a (LIBlockState;Ljava/lang/Comparable;)LIBlockData; set
 IBlockData c (LIBlockState;)Ljava/lang/Comparable; get
-IBlockData v ()LBlock; getBlock
+IBlockData u ()LBlock; getBlock
 IBlockPhysics a (LWorld;LBlockPosition;LBlock;LBlockPosition;)V doPhysics
 IBlockProperties a ()LMaterial; getMaterial
 IChatBaseComponent a (LChatModifier;)LIChatBaseComponent; setChatModifier
@@ -2581,6 +2589,8 @@ PacketHandshakingInSetProtocol b hostname
 PacketHandshakingInSetProtocol c port
 PacketLoginInEncryptionBegin a (Ljava/security/PrivateKey;)Ljavax/crypto/SecretKey; a
 PacketPlayInAbilities b ()Z isFlying
+PacketPlayInAdvancements$Status a OPENED_TAB
+PacketPlayInAdvancements$Status b CLOSED_SCREEN
 PacketPlayInBlockDig$EnumPlayerDigType a START_DESTROY_BLOCK
 PacketPlayInBlockDig$EnumPlayerDigType b ABORT_DESTROY_BLOCK
 PacketPlayInBlockDig$EnumPlayerDigType c STOP_DESTROY_BLOCK
@@ -2758,11 +2768,11 @@ PlayerInventory d (LItemStack;)Z pickup
 PlayerInventory d itemInHandIndex
 PlayerInventory e player
 PlayerInventory f (LItemStack;)V setCarried
-PlayerInventory h carried
+PlayerInventory g carried
 PlayerInventory i ()LItemStack; getItemInHand
 PlayerInventory j ()I getHotbarSize
 PlayerInventory k ()I getFirstEmptySlotIndex
-PlayerInventory p ()LItemStack; getCarried
+PlayerInventory q ()LItemStack; getCarried
 PlayerList a ()V reloadWhitelist
 PlayerList a (LEntity;ILWorldServer;LWorldServer;)V changeWorld
 PlayerList a (LEntityHuman;DDDDILPacket;)V sendPacketNearby
@@ -3084,6 +3094,7 @@ World T ()LBlockPosition; getSpawn
 World U ()LIDataManager; getDataManager
 World V ()LWorldData; getWorldData
 World W ()LGameRules; getGameRules
+World Y ()Z isRaining
 World a (DDDD)Z isPlayerNearby
 World a (I)LEntity; getEntity
 World a (II)LChunk; getChunkAt
