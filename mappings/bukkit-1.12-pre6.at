@@ -97,6 +97,7 @@ public net/minecraft/server/EntityMinecartCommandBlock/COMMAND
 public net/minecraft/server/EntityPigZombie/angerLevel
 public net/minecraft/server/EntityPlayer/invulnerableTicks
 public net/minecraft/server/EntityPlayer/lastSentExp
+public net/minecraft/server/EntityPlayer/locale
 public net/minecraft/server/EntityPlayer/nextContainerCounter()V
 public net/minecraft/server/EntityPlayer/removeQueue
 public net/minecraft/server/EntityPlayer/worldChangeInvuln
@@ -113,6 +114,7 @@ public net/minecraft/server/EntityTrackerEntry/trackedPlayers
 public net/minecraft/server/EntityVillager/inventory
 public net/minecraft/server/EntityVillager/riches
 public net/minecraft/server/EntityZombie/setSize(FF)V
+public net/minecraft/server/EnumChatFormat/character
 public net/minecraft/server/Explosion/source
 public net/minecraft/server/FoodMetaData/exhaustionLevel
 public net/minecraft/server/FoodMetaData/foodLevel

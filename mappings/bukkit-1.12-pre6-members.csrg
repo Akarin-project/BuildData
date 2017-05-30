@@ -93,8 +93,8 @@ Block s (LIBlockData;)Z isOccluding
 Block t ()LIBlockData; getBlockData
 Block u isTileEntity
 Block v ()LSoundEffectType; getStepSound
+Block v (LIBlockData;)Z isComplexRedstone
 Block v stepSound
-Block w (LIBlockData;)Z isComplexRedstone
 Block x material
 Block z frictionFactor
 Block$EnumRandomOffset a NONE
@@ -1036,7 +1036,7 @@ Entity a (LWorld;)V spawnIn
 Entity a (Ljava/lang/String;)Z addScoreboardTag
 Entity aA ()Z isAlive
 Entity aB ()Z inBlock
-Entity aC ()V leaveVehicle
+Entity aF ()V ejectPassengers
 Entity aF invulnerable
 Entity aN ()Ljava/lang/Iterable; getArmorItems
 Entity aP ()Z isBurning
@@ -1745,6 +1745,7 @@ EnumChatFormat s STRIKETHROUGH
 EnumChatFormat t UNDERLINE
 EnumChatFormat u ITALIC
 EnumChatFormat v RESET
+EnumChatFormat z character
 EnumColor a ()I getColorIndex
 EnumColor a (I)LEnumColor; fromInvColorIndex
 EnumColor a WHITE
@@ -2359,8 +2360,8 @@ JsonListEntry e ()Z hasExpired
 JsonListEntry f ()Ljava/lang/Object; getKey
 LazyInitVar b ()Ljava/lang/Object; init
 LocaleI18n a (Ljava/lang/String;)Ljava/lang/String; get
-LoginListener a (Ljava/lang/String;)V disconnect
 LoginListener a networkManager
+LoginListener b (LIChatBaseComponent;)V disconnect 
 LoginListener d random
 LoginListener f server
 LoginListener k loginKey
@@ -2740,11 +2741,11 @@ PlayerConnection F receivedMovePackets
 PlayerConnection G processedMovePackets
 PlayerConnection a (LPacket;)V sendPacket
 PlayerConnection a networkManager
+PlayerConnection b (LIChatBaseComponent;)V disconnect 
 PlayerConnection b player
 PlayerConnection c ()V syncPosition
-PlayerConnection c (Ljava/lang/String;)V disconnect
+PlayerConnection c (Ljava/lang/String;)V handleCommand
 PlayerConnection c LOGGER
-PlayerConnection d (Ljava/lang/String;)V handleCommand
 PlayerConnection d minecraftServer
 PlayerConnection i chatThrottle
 PlayerConnection y teleportPos
@@ -2762,12 +2763,12 @@ PlayerInteractManager e lastDigTick
 PlayerInteractManager g currentTick
 PlayerInventory a items
 PlayerInventory b armor
-PlayerInventory c (LItemStack;)I firstPartial
 PlayerInventory c extraSlots
-PlayerInventory d (LItemStack;)Z pickup
+PlayerInventory d (LItemStack;)I firstPartial
 PlayerInventory d itemInHandIndex
+PlayerInventory e (LItemStack;)Z pickup
 PlayerInventory e player
-PlayerInventory f (LItemStack;)V setCarried
+PlayerInventory g (LItemStack;)V setCarried
 PlayerInventory g carried
 PlayerInventory i ()LItemStack; getItemInHand
 PlayerInventory j ()I getHotbarSize
@@ -2908,6 +2909,7 @@ ScoreboardScore d playerName
 ScoreboardScore e ()Ljava/lang/String; getPlayerName
 ScoreboardScore e score
 ScoreboardServer d (LScoreboardObjective;)Ljava/util/List; getScoreboardScorePacketsForObjective
+ScoreboardTeam a (LEnumChatFormat;)V setColor
 ScoreboardTeam a (LScoreboardTeamBase$EnumNameTagVisibility;)V setNameTagVisibility
 ScoreboardTeam a (LScoreboardTeamBase$EnumTeamPush;)V setCollisionRule
 ScoreboardTeam a (LScoreboardTeamBase;Ljava/lang/String;)Ljava/lang/String; getPlayerDisplayName
@@ -2930,6 +2932,7 @@ ScoreboardTeamBase d (Ljava/lang/String;)Ljava/lang/String; getFormattedName
 ScoreboardTeamBase g ()Z allowFriendlyFire
 ScoreboardTeamBase j ()LScoreboardTeamBase$EnumNameTagVisibility; getDeathMessageVisibility
 ScoreboardTeamBase k ()LScoreboardTeamBase$EnumTeamPush; getCollisionRule
+ScoreboardTeamBase m ()LEnumChatFormat; getColor
 ScoreboardTeamBase$EnumNameTagVisibility a ALWAYS
 ScoreboardTeamBase$EnumNameTagVisibility b NEVER
 ScoreboardTeamBase$EnumNameTagVisibility c HIDE_FOR_OTHER_TEAMS
@@ -2952,12 +2955,12 @@ ServerPing c ()LServerPing$ServerData; getServerData
 ServerPing$ServerData b ()I getProtocolVersion
 ShapeDetector$ShapeDetectorCollection b ()LEnumDirection; getFacing
 ShapeDetectorBlock d ()LBlockPosition; getPosition
-ShapedRecipes b width
-ShapedRecipes c height
-ShapedRecipes d items
-ShapedRecipes e result
-ShapelessRecipes b result
-ShapelessRecipes c ingredients
+ShapedRecipes a width
+ShapedRecipes b height
+ShapedRecipes c items
+ShapedRecipes d result
+ShapelessRecipes a result
+ShapelessRecipes b ingredients
 SharedConstants a (C)Z isAllowedChatCharacter
 SharedConstants c allowedCharacters
 Slot a ()I getMaxStackSize

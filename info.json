@@ -1,10 +1,10 @@
 {
-	"minecraftVersion": "1.12-pre5",
-	"serverUrl": "https://launcher.mojang.com/mc/game/1.12-pre5/server/40e76b2836c92cd9e05af61bb64046c8650c088d/server.jar",
-	"minecraftHash": "79e118b7f48ae6a573ebfd9b8d011816",
-	"accessTransforms": "bukkit-1.12-pre5.at",
-	"classMappings": "bukkit-1.12-pre5-cl.csrg",
-	"memberMappings": "bukkit-1.12-pre5-members.csrg",
+	"minecraftVersion": "1.12-pre6",
+	"serverUrl": "https://launcher.mojang.com/mc/game/1.12-pre6/server/9bc0e57debc61da93c0ea0d97849254db4f4e556/server.jar",
+	"minecraftHash": "ba17334b50a7282efdfb14c183e86c38",
+	"accessTransforms": "bukkit-1.12-pre6.at",
+	"classMappings": "bukkit-1.12-pre6-cl.csrg",
+	"memberMappings": "bukkit-1.12-pre6-members.csrg",
 	"packageMappings": "package.srg",
 	"decompileCommand": "java -jar BuildData/bin/fernflower.jar -dgs=1 -hdc=0 -asc=1 -udv=0 {0} {1}"
 }
