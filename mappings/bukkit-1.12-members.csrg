@@ -1034,18 +1034,19 @@ Entity a (LEnumItemSlot;LItemStack;)V setEquipment
 Entity a (LEnumMoveType;DDD)V move
 Entity a (LWorld;)V spawnIn
 Entity a (Ljava/lang/String;)Z addScoreboardTag
-Entity aA ()Z isAlive
-Entity aB ()Z inBlock
-Entity aF ()V ejectPassengers
+Entity aB ()Ljava/lang/String; getSaveID
+Entity aC ()Z isAlive
+Entity aD ()Z inBlock
 Entity aF invulnerable
-Entity aN ()Ljava/lang/Iterable; getArmorItems
-Entity aP ()Z isBurning
-Entity aQ ()Z isPassenger
-Entity aR ()Z isVehicle
-Entity aS ()Z isSneaking
-Entity aT ()Z isSprinting
-Entity aV ()Z isInvisible
-Entity aX ()I getAirTicks
+Entity aH ()V ejectPassengers
+Entity aP ()Ljava/lang/Iterable; getArmorItems
+Entity aR ()Z isBurning
+Entity aS ()Z isPassenger
+Entity aT ()Z isVehicle
+Entity aU ()Z isSneaking
+Entity aV ()Z isSprinting
+Entity aX ()Z isInvisible
+Entity aZ ()I getAirTicks
 Entity aa ()V burnFromLava
 Entity ab ()V extinguish
 Entity ad ()V recalcPosition
@@ -1062,9 +1063,8 @@ Entity aq uniqueID
 Entity as glowing
 Entity at passengers
 Entity av boundingBox
-Entity aw ()Z isInteractable
-Entity ax ()Z isCollidable
-Entity az ()Ljava/lang/String; getSaveID
+Entity ay ()Z isInteractable
+Entity az ()Z isCollidable
 Entity az fireTicks
 Entity b (DDD)V setPosition
 Entity b (DDDFF)V setPositionRotation
@@ -1072,18 +1072,18 @@ Entity b (FF)V setYawPitch
 Entity b (IZ)V setFlag
 Entity b (LDamageSource;)Z isInvulnerable
 Entity b (Ljava/lang/String;)Z removeScoreboardTag
-Entity bF ()LEntity; getVehicle
-Entity bJ ()I getMaxFireTicks
-Entity ba ()F getHeadRotation
-Entity bg ()LVec3D; getPortalOffset
-Entity bh ()LEnumDirection; getPortalDirection
-Entity bi ()Z isIgnoreBlockTrigger
-Entity bk ()Ljava/util/UUID; getUniqueID
-Entity bo ()Ljava/lang/String; getCustomName
-Entity bp ()Z getCustomNameVisible
-Entity br ()LEnumDirection; getDirection
-Entity bu ()LAxisAlignedBB; getBoundingBox
-Entity bw ()F getHeadHeight
+Entity bH ()LEntity; getVehicle
+Entity bL ()I getMaxFireTicks
+Entity bc ()F getHeadRotation
+Entity bi ()LVec3D; getPortalOffset
+Entity bj ()LEnumDirection; getPortalDirection
+Entity bk ()Z isIgnoreBlockTrigger
+Entity bm ()Ljava/util/UUID; getUniqueID
+Entity bq ()Ljava/lang/String; getCustomName
+Entity br ()Z getCustomNameVisible
+Entity bt ()LEnumDirection; getDirection
+Entity bw ()LAxisAlignedBB; getBoundingBox
+Entity by ()F getHeadHeight
 Entity c (Ljava/lang/String;)V setCustomName
 Entity c (Z)V setSilent
 Entity d (Z)V setNoGravity
@@ -1091,11 +1091,11 @@ Entity e (LNBTTagCompound;)LNBTTagCompound; save
 Entity e (Z)V setSneaking
 Entity f (Z)V setSprinting
 Entity g ()Z getSendCommandFeedback
+Entity g (F)V setHeadRotation
 Entity g entityCount
 Entity h (Z)V setInvisible
 Entity h id
 Entity h_ ()Ljava/lang/String; getName
-Entity i (F)V setHeadRotation
 Entity i (I)V setOnFire
 Entity i (LEntity;)V collide
 Entity i (Z)V setInvulnerable
@@ -1132,9 +1132,9 @@ EntityAnimal K ()Z isTypeNotPersistent
 EntityAnimal a (LDamageSource;F)Z damageEntity
 EntityAnimal a (LEntityAnimal;)Z mate
 EntityAnimal b (LEntityHuman;)I getExpValue
-EntityAnimal do ()LEntityPlayer; getBreedCause
-EntityAnimal dp ()Z isInLove
-EntityAnimal dq ()V resetLove
+EntityAnimal dq ()LEntityPlayer; getBreedCause
+EntityAnimal dr ()Z isInLove
+EntityAnimal ds ()V resetLove
 EntityAreaEffectCloud a (F)V setRadius
 EntityAreaEffectCloud a (I)V setColor
 EntityAreaEffectCloud a (LEntityLiving;)V setSource
@@ -1203,15 +1203,16 @@ EntityBoat$EnumStatus b UNDER_WATER
 EntityBoat$EnumStatus c UNDER_FLOWING_WATER
 EntityBoat$EnumStatus d ON_LAND
 EntityBoat$EnumStatus e IN_AIR
-EntityChicken dj ()Z isChickenJockey
+EntityChicken dl ()Z isChickenJockey
 EntityComplexPart a owner
 EntityCow a (LEntityAgeable;)LEntityAgeable; createChild
 EntityCreeper bA explosionRadius
 EntityCreeper by fuseTicks
 EntityCreeper bz maxFuseTicks
-EntityCreeper dl ()Z isIgnited
-EntityCreeper dn ()Z canCauseHeadDrop
-EntityCreeper do ()V setCausedHeadDrop
+EntityCreeper dn ()Z isIgnited
+EntityCreeper do ()V do_
+EntityCreeper dp ()Z canCauseHeadDrop
+EntityCreeper dq ()V setCausedHeadDrop
 EntityCreeper p ()Z isPowered
 EntityDamageSource c (LEntityLiving;)LIChatBaseComponent; getLocalizedDeathMessage
 EntityDamageSource j ()LEntity; getEntity
@@ -1223,10 +1224,11 @@ EntityEnderCrystal k ()Z isShowingBottom
 EntityEnderDragon a PHASE
 EntityEnderDragon bI currentEnderCrystal
 EntityEnderDragon bv children
-EntityEnderDragon dc ()LDragonControllerManager; getDragonControllerManager
+EntityEnderDragon de ()LDragonControllerManager; getDragonControllerManager
 EntityEnderDragon e (LDamageSource;F)Z dealDamage
 EntityEnderman b (LIBlockData;)V setCarried
-EntityEnderman dl ()LIBlockData; getCarried
+EntityEnderman dn ()LIBlockData; getCarried
+EntityEnderman do ()Z do_
 EntityEnderman$PathfinderGoalEndermanPickupBlock a enderman
 EntityEvokerFangs j ()LEntityLiving; getOwner
 EntityExperienceOrb a (I)I getOrbValue
@@ -1255,7 +1257,7 @@ EntityFishingHook e owner
 EntityFishingHook$HookState a FLYING
 EntityFishingHook$HookState b HOOKED_IN_ENTITY
 EntityFishingHook$HookState c BOBBING
-EntityGhast dc ()I getPower
+EntityGhast de ()I getPower
 EntityGhast$PathfinderGoalGhastAttackTarget b ghast
 EntityGuardian bz goalRandomStroll
 EntityHanging a (LDamageSource;F)Z damageEntity
@@ -1267,24 +1269,25 @@ EntityHanging k ()Z survives
 EntityHanging l ()I getWidth
 EntityHanging n ()I getHeight
 EntityHanging q ()LBlockPosition; getBlockPosition
-EntityHorse dj ()I getVariant
+EntityHorse dl ()I getVariant
 EntityHorse o (I)V setVariant
 EntityHorseAbstract b (Ljava/util/UUID;)V setOwnerUUID
 EntityHorseAbstract bC inventoryChest
 EntityHorseAbstract bE jumpPower
 EntityHorseAbstract bN canSlide
 EntityHorseAbstract bx attributeJumpStrength
-EntityHorseAbstract dA ()V loadChest
-EntityHorseAbstract dC ()D getJumpStrength
-EntityHorseAbstract dF ()I getMaxDomestication
-EntityHorseAbstract ds ()Z isTamed
-EntityHorseAbstract dt ()Ljava/util/UUID; getOwnerUUID
-EntityHorseAbstract dy ()Z hasReproduced
-EntityHorseAbstract dz ()I getTemper
+EntityHorseAbstract dA ()Z hasReproduced
+EntityHorseAbstract dB ()I getTemper
+EntityHorseAbstract dC ()V loadChest
+EntityHorseAbstract dE ()D getJumpStrength
+EntityHorseAbstract dH ()I getMaxDomestication
+EntityHorseAbstract do ()LSoundEffect; do_
+EntityHorseAbstract du ()Z isTamed
+EntityHorseAbstract dv ()Ljava/util/UUID; getOwnerUUID
 EntityHorseAbstract m (I)V setTemper
 EntityHorseAbstract r (Z)V setTamed
 EntityHorseAbstract w (Z)V setStanding
-EntityHorseChestedAbstract dk ()Z isCarryingChest
+EntityHorseChestedAbstract dm ()Z isCarryingChest
 EntityHorseChestedAbstract q (Z)V setCarryingChest
 EntityHuman a (F)V applyExhaustion
 EntityHuman a (I)V levelDown
@@ -1312,20 +1315,20 @@ EntityHuman bz foodData
 EntityHuman c (I)V setScore
 EntityHuman c (LIBlockData;)Z hasBlock
 EntityHuman c sleepTicks
-EntityHuman cS ()I getScore
-EntityHuman cY ()Lcom/mojang/authlib/GameProfile; getProfile
-EntityHuman da ()Z isDeeplySleeping
-EntityHuman dc ()LBlockPosition; getBed
-EntityHuman dd ()Z isRespawnForced
-EntityHuman df ()I getExpToLevel
-EntityHuman dg ()LFoodMetaData; getFoodData
-EntityHuman dj ()LInventoryEnderChest; getEnderChest
-EntityHuman dk ()V releaseShoulderEntities
-EntityHuman dl ()LScoreboard; getScoreboard
-EntityHuman dn ()LNBTTagCompound; getShoulderEntityLeft
-EntityHuman do ()LNBTTagCompound; getShoulderEntityRight
-EntityHuman dr ()LItemCooldown; getCooldownTracker
-EntityHuman dt ()Z isCreativeAndOp
+EntityHuman cU ()I getScore
+EntityHuman da ()Lcom/mojang/authlib/GameProfile; getProfile
+EntityHuman dc ()Z isDeeplySleeping
+EntityHuman de ()LBlockPosition; getBed
+EntityHuman df ()Z isRespawnForced
+EntityHuman dh ()I getExpToLevel
+EntityHuman di ()LFoodMetaData; getFoodData
+EntityHuman dl ()LInventoryEnderChest; getEnderChest
+EntityHuman dm ()V releaseShoulderEntities
+EntityHuman dn ()LScoreboard; getScoreboard
+EntityHuman dp ()LNBTTagCompound; getShoulderEntityLeft
+EntityHuman dq ()LNBTTagCompound; getShoulderEntityRight
+EntityHuman dt ()LItemCooldown; getCooldownTracker
+EntityHuman dv ()Z isCreativeAndOp
 EntityHuman f (LEntity;)V attack
 EntityHuman g (I)V addScore
 EntityHuman h (LNBTTagCompound;)V setShoulderEntityLeft
@@ -1346,7 +1349,7 @@ EntityHuman$EnumChatVisibility a FULL
 EntityHuman$EnumChatVisibility b SYSTEM
 EntityHuman$EnumChatVisibility c HIDDEN
 EntityIllagerWizard a (LEntityIllagerWizard$Spell;)V setSpell
-EntityIllagerWizard dm ()LEntityIllagerWizard$Spell; getSpell
+EntityIllagerWizard do ()LEntityIllagerWizard$Spell; getSpell
 EntityIllagerWizard$Spell a NONE
 EntityIllagerWizard$Spell b SUMMON_VEX
 EntityIllagerWizard$Spell c FANGS
@@ -1371,11 +1374,11 @@ EntityInsentient bt dropChanceHand
 EntityInsentient bu dropChanceArmor
 EntityInsentient bv goalTarget
 EntityInsentient bz canPickUpLoot
-EntityInsentient cW ()Z isPersistent
-EntityInsentient cY ()Z isLeashed
-EntityInsentient cZ ()LEntity; getLeashHolder
+EntityInsentient cY ()Z isPersistent
 EntityInsentient d (LEntityLiving;)V setGoalTarget
-EntityInsentient da ()Z isNoAI
+EntityInsentient da ()Z isLeashed
+EntityInsentient db ()LEntity; getLeashHolder
+EntityInsentient dc ()Z isNoAI
 EntityInsentient f moveController
 EntityInsentient h navigation
 EntityInsentient n (Z)V setNoAI
@@ -1388,7 +1391,7 @@ EntityInsentient z ()LEntityLiving; getGoalTarget
 EntityInsentient$EnumEntityPositionType a ON_GROUND
 EntityInsentient$EnumEntityPositionType b IN_AIR
 EntityInsentient$EnumEntityPositionType c IN_WATER
-EntityIronGolem dl ()Z isPlayerCreated
+EntityIronGolem dn ()Z isPlayerCreated
 EntityIronGolem p (Z)V setPlayerCreated
 EntityItem a (LItemStack;)V setItemStack
 EntityItem d age
@@ -1422,14 +1425,13 @@ EntityLiving b (LEntityHuman;)I getExpValue
 EntityLiving b (LEnumItemSlot;)LItemStack; getEquipment
 EntityLiving b (LMobEffectList;)LMobEffect; getEffect
 EntityLiving b (ZI)V dropDeathLoot
-EntityLiving bK ()V initAttributes
-EntityLiving bN ()Z isDropExperience
-EntityLiving bO ()Z alwaysGivesExp
-EntityLiving bP ()Ljava/util/Random; getRandom
-EntityLiving bQ ()LEntityLiving; getLastDamager
-EntityLiving bV ()V tickPotionEffects
-EntityLiving bX ()V removeAllEffects
-EntityLiving bY ()Ljava/util/Collection; getEffects
+EntityLiving bM ()V initAttributes
+EntityLiving bP ()Z isDropExperience
+EntityLiving bQ ()Z alwaysGivesExp
+EntityLiving bR ()Ljava/util/Random; getRandom
+EntityLiving bS ()LEntityLiving; getLastDamager
+EntityLiving bX ()V tickPotionEffects
+EntityLiving bZ ()V removeAllEffects
 EntityLiving bc lastDamage
 EntityLiving bo activeItem
 EntityLiving bs attributeMap
@@ -1441,36 +1443,37 @@ EntityLiving bz hurtTimestamp
 EntityLiving c (F)V setHealth
 EntityLiving c (LDamageSource;F)F applyMagicModifier
 EntityLiving c (LMobEffect;)V addEffect
-EntityLiving cB ()F getAbsorptionHearts
-EntityLiving cD ()LEnumMainHand; getMainHand
-EntityLiving cE ()Z isHandRaised
-EntityLiving cK ()V clearActiveItem
-EntityLiving cM ()Z isBlocking
-EntityLiving cb ()F getHealth
-EntityLiving ce ()I getArmorStrength
-EntityLiving cf ()LCombatTracker; getCombatTracker
-EntityLiving ch ()F getMaxHealth
-EntityLiving ci ()I getArrowCount
-EntityLiving ck ()LAttributeMapBase; getAttributeMap
-EntityLiving cl ()LEnumMonsterType; getMonsterType
-EntityLiving cm ()LItemStack; getItemInMainHand
-EntityLiving cn ()LItemStack; getItemInOffHand
-EntityLiving cq ()Z isFrozen
-EntityLiving cx ()Z isSleeping
-EntityLiving cy ()V doTick
+EntityLiving cA ()V doTick
+EntityLiving cD ()F getAbsorptionHearts
+EntityLiving cF ()LEnumMainHand; getMainHand
+EntityLiving cG ()Z isHandRaised
+EntityLiving cM ()V clearActiveItem
+EntityLiving cO ()Z isBlocking
+EntityLiving ca ()Ljava/util/Collection; getEffects
+EntityLiving cd ()F getHealth
+EntityLiving cg ()I getArmorStrength
+EntityLiving ch ()LCombatTracker; getCombatTracker
+EntityLiving cj ()F getMaxHealth
+EntityLiving ck ()I getArrowCount
+EntityLiving cm ()LAttributeMapBase; getAttributeMap
+EntityLiving cn ()LEnumMonsterType; getMonsterType
+EntityLiving co ()LItemStack; getItemInMainHand
+EntityLiving cp ()LItemStack; getItemInOffHand
+EntityLiving cs ()Z isFrozen
+EntityLiving cz ()Z isSleeping
 EntityLiving d (LDamageSource;F)V damageEntity0
 EntityLiving d (LMobEffectList;)V removeEffect
 EntityLiving f (I)V setArrowCount
 EntityLiving f (LDamageSource;)Z applyBlockingModifier
 EntityLiving f HEALTH
+EntityLiving i (F)V damageArmor
 EntityLiving j ()V enterCombat
+EntityLiving j (F)V damageShield
 EntityLiving k ()V exitCombat
-EntityLiving k (F)V damageArmor
-EntityLiving l (F)V damageShield
 EntityLiving l_ ()Z isBaby
-EntityLiving o (F)V setAbsorptionHearts
-EntityLlama dO ()I getStrength
-EntityLlama dP ()I getVariant
+EntityLiving m (F)V setAbsorptionHearts
+EntityLlama dQ ()I getStrength
+EntityLlama dR ()I getVariant
 EntityLlama o (I)V setVariant
 EntityLlama p (I)V setStrength
 EntityLlamaSpit a shooter
@@ -1495,7 +1498,7 @@ EntityMinecartHopper C ()Z isEnabled
 EntityMinecartHopper g (I)V setCooldown
 EntityMinecartHopper l (Z)V setEnabled
 EntityMonster a (LDamageSource;F)Z damageEntity
-EntityOcelot dr ()I getCatType
+EntityOcelot dt ()I getCatType
 EntityOcelot g (I)V setCatType
 EntityOwnable b ()Ljava/util/UUID; getOwnerUUID
 EntityOwnable p_ ()LEntity; getOwner
@@ -1526,9 +1529,9 @@ EntityPainting$EnumArt w PIGSCENE
 EntityPainting$EnumArt x BURNING_SKULL
 EntityPainting$EnumArt y SKELETON
 EntityPainting$EnumArt z DONKEY_KONG
-EntityParrot ds ()I getVariant
+EntityParrot du ()I getVariant
 EntityParrot m (I)V setVariant
-EntityPig dj ()Z hasSaddle
+EntityPig dl ()Z hasSaddle
 EntityPig p (Z)V setSaddle
 EntityPigZombie bx angerLevel
 EntityPigZombie by soundDelay
@@ -1552,8 +1555,8 @@ EntityPlayer cj lastSentExp
 EntityPlayer ck invulnerableTicks
 EntityPlayer cp worldChangeInvuln
 EntityPlayer cw containerCounter
-EntityPlayer du ()Z canPvP
-EntityPlayer dv ()V nextContainerCounter
+EntityPlayer dw ()Z canPvP
+EntityPlayer dx ()V nextContainerCounter
 EntityPlayer e (LEntity;)V setSpectatorTarget
 EntityPlayer g ping
 EntityPlayer h viewingCredits
@@ -1573,12 +1576,13 @@ EntityProjectile f blockZ
 EntityProjectile g inBlockId
 EntityProjectile h shooter
 EntityProjectile k ()LEntityLiving; getShooter
-EntityRabbit dl ()I getRabbitType
+EntityRabbit dn ()I getRabbitType
+EntityRabbit do ()V do_
 EntityRabbit g (I)V setRabbitType
 EntitySheep b (LEnumColor;)V setColor
 EntitySheep by container
-EntitySheep dj ()LEnumColor; getColor
-EntitySheep dk ()Z isSheared
+EntitySheep dl ()LEnumColor; getColor
+EntitySheep dm ()Z isSheared
 EntitySheep p (Z)V setSheared
 EntityShulker bx COLOR
 EntityShulkerBullet a shooter
@@ -1586,12 +1590,12 @@ EntityShulkerBullet b target
 EntitySilverfish$PathfinderGoalSilverfishWakeOthers a silverfish
 EntitySlime H ()LItem; getLoot
 EntitySlime a (IZ)V setSize
-EntitySlime dj ()I getSize
+EntitySlime dl ()I getSize
 EntitySnowman a (Z)V setHasPumpkin
 EntitySnowman p ()Z hasPumpkin
 EntitySpectralArrow f duration
 EntitySpider a (LDifficultyDamageScaler;LGroupDataEntity;)LGroupDataEntity; prepare
-EntitySpider bw ()F getHeadHeight
+EntitySpider by ()F getHeadHeight
 EntityTNTPrimed a (I)V setFuseTicks
 EntityTNTPrimed a FUSE_TICKS
 EntityTNTPrimed b source
@@ -1600,10 +1604,10 @@ EntityTNTPrimed l ()I getFuseTicks
 EntityTNTPrimed n ()V explode
 EntityTameableAnimal b (Ljava/util/UUID;)V setOwnerUUID
 EntityTameableAnimal bz goalSit
-EntityTameableAnimal dj ()Z isTamed
-EntityTameableAnimal dl ()Z isSitting
-EntityTameableAnimal dm ()LEntityLiving; getOwner
-EntityTameableAnimal dn ()LPathfinderGoalSit; getGoalSit
+EntityTameableAnimal dl ()Z isTamed
+EntityTameableAnimal dn ()Z isSitting
+EntityTameableAnimal do ()LEntityLiving; getOwner
+EntityTameableAnimal dp ()LPathfinderGoalSit; getGoalSit
 EntityTameableAnimal q (Z)V setTamed
 EntityTameableAnimal r (Z)V setSitting
 EntityTippedArrow at hasColor
@@ -1645,23 +1649,25 @@ EntityVillager bE trades
 EntityVillager bI riches
 EntityVillager bO inventory
 EntityVillager bx village
-EntityVillager dj ()I getProfession
-EntityVillager do ()LInventorySubcontainer; do_
+EntityVillager dl ()I getProfession
+EntityVillager dm ()Z isInLove
+EntityVillager do ()Z do_
 EntityVillager g (I)V setProfession
 EntityWitherSkull a (Z)V setCharged
 EntityWitherSkull n ()Z isCharged
 EntityWolf a (LEnumColor;)V setCollarColor
 EntityWolf bB DATA_HEALTH
-EntityWolf dt ()Z isAngry
-EntityWolf du ()LEnumColor; getCollarColor
+EntityWolf dv ()Z isAngry
+EntityWolf dw ()LEnumColor; getCollarColor
 EntityWolf s (Z)V setAngry
 EntityZombie a (LDamageSource;F)Z damageEntity
 EntityZombie a (LDifficultyDamageScaler;LGroupDataEntity;)LGroupDataEntity; prepare
+EntityZombie do ()V do_
 EntityZombie q (Z)V setBaby
 EntityZombieVillager a (I)V setProfession
 EntityZombieVillager bx conversionTime
-EntityZombieVillager dn ()I getProfession
-EntityZombieVillager dq ()Z isConverting
+EntityZombieVillager dp ()I getProfession
+EntityZombieVillager ds ()Z isConverting
 EnumAnimation a NONE
 EnumAnimation b EAT
 EnumAnimation c DRINK
@@ -1940,6 +1946,7 @@ GameRules e (Ljava/lang/String;)Z contains
 GameRules$EnumGameRuleType a ANY_VALUE
 GameRules$EnumGameRuleType b BOOLEAN_VALUE
 GameRules$EnumGameRuleType c NUMERICAL_VALUE
+GameRules$EnumGameRuleType d FUNCTION
 GenLayerSpecial$EnumGenLayerSpecial a COOL_WARM
 GenLayerSpecial$EnumGenLayerSpecial b HEAT_ICE
 GenLayerSpecial$EnumGenLayerSpecial c SPECIAL
@@ -2361,7 +2368,7 @@ JsonListEntry f ()Ljava/lang/Object; getKey
 LazyInitVar b ()Ljava/lang/Object; init
 LocaleI18n a (Ljava/lang/String;)Ljava/lang/String; get
 LoginListener a networkManager
-LoginListener b (LIChatBaseComponent;)V disconnect 
+LoginListener b (LIChatBaseComponent;)V disconnect
 LoginListener d random
 LoginListener f server
 LoginListener k loginKey
@@ -2620,6 +2627,8 @@ PacketPlayInFlying e pitch
 PacketPlayInFlying g hasPos
 PacketPlayInFlying h hasLook
 PacketPlayInHeldItemSlot a itemInHandIndex
+PacketPlayInRecipeDisplayed$Status a SHOWN
+PacketPlayInRecipeDisplayed$Status b SETTINGS
 PacketPlayInResourcePackStatus a status
 PacketPlayInResourcePackStatus$EnumResourcePackStatus a SUCCESSFULLY_LOADED
 PacketPlayInResourcePackStatus$EnumResourcePackStatus b DECLINED
@@ -2661,6 +2670,9 @@ PacketPlayOutPosition$EnumPlayerTeleportFlags b Y
 PacketPlayOutPosition$EnumPlayerTeleportFlags c Z
 PacketPlayOutPosition$EnumPlayerTeleportFlags d Y_ROT
 PacketPlayOutPosition$EnumPlayerTeleportFlags e X_ROT
+PacketPlayOutRecipes$Action a INIT
+PacketPlayOutRecipes$Action b ADD
+PacketPlayOutRecipes$Action c REMOVE
 PacketPlayOutScoreboardScore$EnumScoreboardAction a CHANGE
 PacketPlayOutScoreboardScore$EnumScoreboardAction b REMOVE
 PacketPlayOutSpawnPosition a position
@@ -2741,7 +2753,7 @@ PlayerConnection F receivedMovePackets
 PlayerConnection G processedMovePackets
 PlayerConnection a (LPacket;)V sendPacket
 PlayerConnection a networkManager
-PlayerConnection b (LIChatBaseComponent;)V disconnect 
+PlayerConnection b (LIChatBaseComponent;)V disconnect
 PlayerConnection b player
 PlayerConnection c ()V syncPosition
 PlayerConnection c (Ljava/lang/String;)V handleCommand

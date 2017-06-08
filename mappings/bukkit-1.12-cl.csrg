@@ -1293,6 +1293,7 @@ jp PacketPlayOutPosition
 jp$a PacketPlayOutPosition$EnumPlayerTeleportFlags
 jq PacketPlayOutBed
 jr PacketPlayOutRecipes
+jr$a PacketPlayOutRecipes$Action
 js PacketPlayOutEntityDestroy
 jt PacketPlayOutRemoveEntityEffect
 ju PacketPlayOutResourcePackSend
@@ -1358,6 +1359,7 @@ lp PacketPlayInEntityAction
 lp$a PacketPlayInEntityAction$EnumPlayerAction
 lq PacketPlayInSteerVehicle
 lr PacketPlayInRecipeDisplayed
+lr$a PacketPlayInRecipeDisplayed$Status
 ls PacketPlayInResourcePackStatus
 ls$a PacketPlayInResourcePackStatus$EnumResourcePackStatus
 lt PacketPlayInAdvancements
