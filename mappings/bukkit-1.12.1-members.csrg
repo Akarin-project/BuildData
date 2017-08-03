@@ -1112,6 +1112,7 @@ Entity n lastY
 Entity n_ ()Z hasCustomName
 Entity o ()V stopRiding
 Entity o lastZ
+Entity o_ ()LEnumPistonReaction; getPushReaction
 Entity p locX
 Entity q locY
 Entity r locZ
@@ -1155,6 +1156,7 @@ EntityAreaEffectCloud j ()F getRadius
 EntityAreaEffectCloud k ()I getColor
 EntityAreaEffectCloud l ()LEnumParticle; getParticle
 EntityAreaEffectCloud r ()I getDuration
+EntityAreaEffectCloud y ()LEntityLiving; getSource
 EntityArmorStand a (LVector3f;)V setHeadPose
 EntityArmorStand b (LVector3f;)V setBodyPose
 EntityArmorStand bD headPose
@@ -2788,6 +2790,7 @@ PlayerInventory k ()I getFirstEmptySlotIndex
 PlayerInventory q ()LItemStack; getCarried
 PlayerList a ()V reloadWhitelist
 PlayerList a (LEntity;ILWorldServer;LWorldServer;)V changeWorld
+PlayerList a (LEntityHuman;)LServerStatisticManager; getStatisticManager
 PlayerList a (LEntityHuman;DDDDILPacket;)V sendPacketNearby
 PlayerList a (LEntityPlayer;IZ)LEntityPlayer; moveToWorld
 PlayerList a (LIChatBaseComponent;)V sendMessage
@@ -3008,6 +3011,8 @@ TileEntity B ()V invalidateBlockCache
 TileEntity C ()Z isFilteredNBT
 TileEntity D ()LWorld; getWorld
 TileEntity a (LBlockPosition;)V setPosition
+TileEntity a (LNBTTagCompound;)V load
+TileEntity a (LWorld;LNBTTagCompound;)LTileEntity; create
 TileEntity b (LNBTTagCompound;)LNBTTagCompound; save
 TileEntity b world
 TileEntity c ()LPacketPlayOutTileEntityData; getUpdatePacket
