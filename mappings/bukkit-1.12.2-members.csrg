@@ -803,6 +803,7 @@ ChunkProviderServer d chunkLoader
 ChunkProviderServer e chunks
 ChunkProviderServer f (II)LChunk; loadChunk
 ChunkProviderServer f world
+ChunkRegionLoader a (LChunk;LWorld;LNBTTagCompound;)V saveBody
 ChunkSection a (III)LIBlockData; getType
 ChunkSection a (IIILIBlockData;)V setType
 ChunkSection a yPos
@@ -841,8 +842,12 @@ CommandObjectiveExecutor$EnumCommandResult d AFFECTED_ITEMS
 CommandObjectiveExecutor$EnumCommandResult e QUERY_RESULT
 Container a (I)LSlot; getSlot
 Container a (ILItemStack;)V setItem
+Container a (LEntityHuman;)Z canUse
 Container a (LICrafting;)V addSlotListener
 Container a (LIInventory;I)LSlot; getSlot
+Container b (LEntityHuman;I)LItemStack; shiftClick
+Container b items
+Container c slots
 Container d windowId
 Container e listeners
 Container f dragType
@@ -1572,11 +1577,11 @@ EntityPotion p ()Z isLingering
 EntityProjectile a inGround
 EntityProjectile at shooterName
 EntityProjectile b shake
-EntityProjectile d blockX
-EntityProjectile e blockY
-EntityProjectile f blockZ
-EntityProjectile g inBlockId
-EntityProjectile h shooter
+EntityProjectile c shooter
+EntityProjectile e blockX
+EntityProjectile f blockY
+EntityProjectile g blockZ
+EntityProjectile h inBlockId
 EntityProjectile k ()LEntityLiving; getShooter
 EntityRabbit dn ()I getRabbitType
 EntityRabbit do ()V do_
@@ -1975,6 +1980,7 @@ IChatBaseComponent b ()LChatModifier; getChatModifier
 IChatBaseComponent c ()Ljava/lang/String; toPlainText
 IChatBaseComponent e ()Ljava/lang/String; getText
 IChunkLoader a (II)Z chunkExists
+IChunkLoader a (LWorld;LChunk;)V saveChunk
 IChunkProvider a (II)LChunk; getLoadedChunkAt
 IChunkProvider c (II)LChunk; getChunkAt
 IChunkProvider d ()Z unloadChunks
