@@ -1,6 +1,6 @@
 {
 	"minecraftVersion": "1.12.2",
-	"serverUrl": "https://launcher.mojang.com/mc/game/1.12.2/server/886945bfb2b978778c3a0288fd7fab09d315b25f/server.jar",
+	"serverUrl": "https://aws-s3.akarin.io/Minecraft.Download/versions/1.12.2/minecraft_server.1.12.2.jar",
 	"minecraftHash": "71728ed3fbd0acd1394bf3ade2649a5c",
 	"accessTransforms": "bukkit-1.12.2.at",
 	"classMappings": "bukkit-1.12.2-cl.csrg",
