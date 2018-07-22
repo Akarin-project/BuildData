@@ -7,14 +7,23 @@ public net/minecraft/server/RecipeItemStack$StackProvider
 public net/minecraft/server/BlockDispenser/dispense(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
 public net/minecraft/server/BlockDropper/dispense(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
 
-
 public net/minecraft/server/EntityHanging/setDirection(Lnet/minecraft/server/EnumDirection;)V
 public net/minecraft/server/EntityItemFrame/setDirection(Lnet/minecraft/server/EnumDirection;)V
+
+public net/minecraft/server/Entity/setSize(FF)V
+public net/minecraft/server/EntityAgeable/setSize(FF)V
+public net/minecraft/server/EntityArmorStand/setSize(FF)V
+public net/minecraft/server/EntityPufferFish/setSize(FF)V
+public net/minecraft/server/EntityZombie/setSize(FF)V
+
+public net/minecraft/server/EntityGuardian/initAttributes()V
+public net/minecraft/server/EntityGuardianElder/initAttributes()V
 
 public net/minecraft/server/AdvancementDataPlayer/data
 public net/minecraft/server/AdvancementDataWorld/DESERIALIZER
 public net/minecraft/server/AdvancementDataWorld/REGISTRY
 public net/minecraft/server/Advancements/advancements
+public net/minecraft/server/AttributeRanged/maximum
 public net/minecraft/server/BlockDispenser/REGISTRY
 public net/minecraft/server/BlockJukeBox/dropRecord(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
 public net/minecraft/server/BlockRedstoneWire/getPower(Lnet/minecraft/server/IBlockAccess;Lnet/minecraft/server/BlockPosition;I)I
@@ -52,8 +61,6 @@ public net/minecraft/server/Entity/glowing
 public net/minecraft/server/Entity/inWater
 public net/minecraft/server/Entity/passengers
 public net/minecraft/server/Entity/setFlag(IZ)V
-public net/minecraft/server/Entity/setSize(FF)V
-public net/minecraft/server/EntityAgeable/setSize(FF)V
 public net/minecraft/server/EntityAreaEffectCloud/durationOnUse
 public net/minecraft/server/EntityAreaEffectCloud/radiusOnUse
 public net/minecraft/server/EntityAreaEffectCloud/radiusPerTick
@@ -68,7 +75,6 @@ public net/minecraft/server/EntityArmorStand/rightLegPose
 public net/minecraft/server/EntityArmorStand/setArms(Z)V
 public net/minecraft/server/EntityArmorStand/setBasePlate(Z)V
 public net/minecraft/server/EntityArmorStand/setMarker(Z)V
-public net/minecraft/server/EntityArmorStand/setSize(FF)V
 public net/minecraft/server/EntityArmorStand/setSmall(Z)V
 public net/minecraft/server/EntityArrow/inGround
 public net/minecraft/server/EntityArrow/knockbackStrength
@@ -88,7 +94,6 @@ public net/minecraft/server/EntityFireworks/FIREWORK_ITEM
 public net/minecraft/server/EntityFireworks/expectedLifespan
 public net/minecraft/server/EntityFishingHook/owner
 public net/minecraft/server/EntityGuardian/goalRandomStroll
-public net/minecraft/server/EntityGuardian/initAttributes()V
 public net/minecraft/server/EntityHanging/blockPosition
 public net/minecraft/server/EntityHorseAbstract/attributeJumpStrength
 public net/minecraft/server/EntityHorseAbstract/inventoryChest
@@ -136,7 +141,6 @@ public net/minecraft/server/EntityVillager/inventory
 public net/minecraft/server/EntityVillager/populateTrades()V
 public net/minecraft/server/EntityVillager/riches
 public net/minecraft/server/EntityVillager/trades
-public net/minecraft/server/EntityZombie/setSize(FF)V
 public net/minecraft/server/EnumChatFormat/character
 public net/minecraft/server/Explosion/source
 public net/minecraft/server/FoodMetaData/exhaustionLevel
@@ -160,6 +164,7 @@ public net/minecraft/server/MerchantRecipe/rewardExp
 public net/minecraft/server/MerchantRecipe/sellingItem
 public net/minecraft/server/MerchantRecipe/uses
 public net/minecraft/server/MinecraftServer/LOGGER
+public net/minecraft/server/MinecraftServer/convertWorld(Ljava/lang/String;)V
 public net/minecraft/server/MinecraftServer/dataConverterManager
 public net/minecraft/server/MobEffectList/durationModifier
 public net/minecraft/server/MobSpawnerAbstract/getMobName()Lnet/minecraft/server/MinecraftKey;
@@ -231,3 +236,6 @@ private+synchronized net/minecraft/server/RegionFile/getOffset(II)I
 public+synchronized net/minecraft/server/RegionFileCache/chunkExists(Ljava/io/File;II)Z
 public-final net/minecraft/server/World/worldProvider
 public-final net/minecraft/server/WorldServer/tracker
+
+public-final com/mojang/brigadier/suggestion/SuggestionsBuilder/start
+public-final com/mojang/brigadier/suggestion/SuggestionsBuilder/remaining
