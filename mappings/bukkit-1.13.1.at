@@ -24,9 +24,10 @@ public net/minecraft/server/AdvancementDataWorld/DESERIALIZER
 public net/minecraft/server/AdvancementDataWorld/REGISTRY
 public net/minecraft/server/Advancements/advancements
 public net/minecraft/server/AttributeRanged/maximum
+public net/minecraft/server/Block/strength
 public net/minecraft/server/BlockDispenser/REGISTRY
 public net/minecraft/server/BlockJukeBox/dropRecord(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V
-public net/minecraft/server/BlockRedstoneWire/getPower(Lnet/minecraft/server/IBlockAccess;Lnet/minecraft/server/BlockPosition;I)I
+public net/minecraft/server/BlockRedstoneWire/getPower(ILnet/minecraft/server/IBlockData;)I
 public net/minecraft/server/BlockShulkerBox/color
 public net/minecraft/server/BossBattle/color
 public net/minecraft/server/BossBattle/style
@@ -39,9 +40,7 @@ public net/minecraft/server/Chunk/tileEntities
 public net/minecraft/server/Chunk/world
 public net/minecraft/server/ChunkProviderServer/chunkGenerator
 public net/minecraft/server/ChunkProviderServer/chunks
-public net/minecraft/server/ChunkProviderServer/generateChunk(II)Ljava/util/concurrent/CompletableFuture;
 public net/minecraft/server/ChunkProviderServer/saveChunk(Lnet/minecraft/server/IChunkAccess;)V
-public net/minecraft/server/ChunkProviderServer/saveChunkNOP(Lnet/minecraft/server/Chunk;)V
 public net/minecraft/server/ChunkProviderServer/unloadQueue
 public net/minecraft/server/ChunkProviderServer/world
 public net/minecraft/server/ChunkRegionLoader/loadEntities(Lnet/minecraft/server/NBTTagCompound;Lnet/minecraft/server/Chunk;)V
@@ -53,6 +52,7 @@ public net/minecraft/server/DataConverterMaterialId/ID_MAPPING
 public net/minecraft/server/DataConverterSpawnEgg/ID_MAPPING
 public net/minecraft/server/DedicatedServer/propertyManager
 public net/minecraft/server/DedicatedServer/remoteControlCommandListener
+public net/minecraft/server/DimensionManager/<init>(ILjava/lang/String;Ljava/lang/String;Ljava/util/function/Supplier;)V
 public net/minecraft/server/Entity/fireTicks
 public net/minecraft/server/Entity/getFlag(I)Z
 public net/minecraft/server/Entity/getMaxFireTicks()I
@@ -92,6 +92,7 @@ public net/minecraft/server/EntityExperienceOrb/value
 public net/minecraft/server/EntityFallingBlock/hurtEntities
 public net/minecraft/server/EntityFireworks/FIREWORK_ITEM
 public net/minecraft/server/EntityFireworks/expectedLifespan
+public net/minecraft/server/EntityFish/isFromBucket()Z
 public net/minecraft/server/EntityFishingHook/owner
 public net/minecraft/server/EntityGuardian/goalRandomStroll
 public net/minecraft/server/EntityHanging/blockPosition
@@ -108,6 +109,8 @@ public net/minecraft/server/EntityIllagerWizard/getSpell()Lnet/minecraft/server/
 public net/minecraft/server/EntityInsentient/canPickUpLoot
 public net/minecraft/server/EntityInsentient/dropChanceArmor
 public net/minecraft/server/EntityInsentient/dropChanceHand
+public net/minecraft/server/EntityInsentient/lootTableKey
+public net/minecraft/server/EntityInsentient/lootTableSeed
 public net/minecraft/server/EntityInsentient/persistent
 public net/minecraft/server/EntityItem/pickupDelay
 public net/minecraft/server/EntityLiving/HEALTH
@@ -119,6 +122,7 @@ public net/minecraft/server/EntityLiving/lastDamager
 public net/minecraft/server/EntityLiving/updateEffects
 public net/minecraft/server/EntityLlama/setStrength(I)V
 public net/minecraft/server/EntityMinecartCommandBlock/COMMAND
+public net/minecraft/server/EntityMinecartContainer/lootTableSeed
 public net/minecraft/server/EntityPigZombie/angerLevel
 public net/minecraft/server/EntityPlayer/invulnerableTicks
 public net/minecraft/server/EntityPlayer/lastSentExp
@@ -152,6 +156,7 @@ public net/minecraft/server/InventoryLargeChest/right
 public net/minecraft/server/InventoryMerchant/selectedIndex
 public net/minecraft/server/InventorySubcontainer/items
 public net/minecraft/server/ItemBlockWallable/wallBlock
+public net/minecraft/server/ItemBucket/fluidType
 public net/minecraft/server/ItemCooldown$Info
 public net/minecraft/server/ItemCooldown$Info/endTick
 public net/minecraft/server/ItemCooldown/cooldowns
@@ -166,6 +171,7 @@ public net/minecraft/server/MerchantRecipe/uses
 public net/minecraft/server/MinecraftServer/LOGGER
 public net/minecraft/server/MinecraftServer/convertWorld(Ljava/lang/String;)V
 public net/minecraft/server/MinecraftServer/dataConverterManager
+public net/minecraft/server/MinecraftServer/worldServer
 public net/minecraft/server/MobEffectList/durationModifier
 public net/minecraft/server/MobSpawnerAbstract/getMobName()Lnet/minecraft/server/MinecraftKey;
 public net/minecraft/server/MobSpawnerAbstract/maxNearbyEntities
@@ -182,6 +188,8 @@ public net/minecraft/server/PacketPlayInCustomPayload/data
 public net/minecraft/server/PacketPlayInCustomPayload/tag
 public net/minecraft/server/PacketPlayInResourcePackStatus/status
 public net/minecraft/server/PacketPlayOutBlockChange/block
+public net/minecraft/server/PacketPlayOutPlayerListHeaderFooter/footer
+public net/minecraft/server/PacketPlayOutPlayerListHeaderFooter/header
 public net/minecraft/server/PacketPlayOutSpawnPosition/position
 public net/minecraft/server/PlayerAbilities/flySpeed
 public net/minecraft/server/PlayerAbilities/walkSpeed
@@ -195,7 +203,6 @@ public net/minecraft/server/RecipeItemStack/buildChoices()V
 public net/minecraft/server/RecipeItemStack/choices
 public net/minecraft/server/ScoreboardObjective/displayName
 public net/minecraft/server/Slot/index
-public net/minecraft/server/StatisticList/REGISTRY_CUSTOM
 public net/minecraft/server/TileEntityBanner/color
 public net/minecraft/server/TileEntityBanner/patterns
 public net/minecraft/server/TileEntityBeacon/levels
@@ -233,7 +240,6 @@ public-final net/minecraft/server/MinecraftServer/commandDispatcher
 public-final net/minecraft/server/MinecraftServer/convertable
 public-final net/minecraft/server/MinecraftServer/universe
 private+synchronized net/minecraft/server/RegionFile/getOffset(II)I
-public+synchronized net/minecraft/server/RegionFileCache/chunkExists(Ljava/io/File;II)Z
 public-final net/minecraft/server/World/worldProvider
 public-final net/minecraft/server/WorldServer/tracker
 
